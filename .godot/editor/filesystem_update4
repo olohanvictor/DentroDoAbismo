@@ -1,3 +1,8 @@
-res://screens/desktop.tscn
+res://windows/FluxNavegador/NavegadorFlux.tscn
+res://scripts/windows/NavegadorFlux/navegador_flux.gd
+res://windows/Spotilite/Spotilite.tscn
+res://windows/Config/Configuracoes.tscn
+res://scripts/window.gd
 res://scripts/screens/Desktop/desktop.gd
-res://windows/Explorer/Explorer.tscn
+res://windows/Configuracao/configuracoes.tscn
+res://scripts/windows/Configuracao/configuracoes.gd

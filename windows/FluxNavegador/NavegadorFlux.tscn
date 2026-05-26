@@ -1,0 +1,642 @@
+[gd_scene format=3 uid="uid://chqqv5th87f0x"]
+
+[ext_resource type="Script" uid="uid://coubxs8j1y7bj" path="res://scripts/windows/NavegadorFlux/navegador_flux.gd" id="1_66570"]
+
+[sub_resource type="StyleBoxFlat" id="sb_bg"]
+bg_color = Color(0.032, 0.01, 0.068, 1)
+
+[sub_resource type="StyleBoxFlat" id="sb_topbar"]
+bg_color = Color(0.038, 0.012, 0.078, 1)
+border_width_bottom = 1
+border_color = Color(0.45, 0.12, 0.75, 0.35)
+
+[sub_resource type="StyleBoxFlat" id="sb_tab_normal"]
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="sb_tab_active"]
+bg_color = Color(0.55, 0.14, 0.9, 0.15)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.22, 1, 0.55)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="sb_tab_hover"]
+bg_color = Color(0.55, 0.14, 0.9, 0.08)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.18, 0.85, 0.3)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="sb_status_pill"]
+bg_color = Color(0.18, 0.55, 0.35, 0.18)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28, 0.75, 0.5, 0.4)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="sb_urlbar"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0.042, 0.014, 0.088, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28, 0.1, 0.48, 0.55)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[sub_resource type="StyleBoxFlat" id="sb_urlbar_focus"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0.05, 0.018, 0.105, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.22, 1, 0.9)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0.6, 0.18, 1, 0.18)
+shadow_size = 8
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="sb_progress_bg"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="sb_progress_fill"]
+bg_color = Color(0.65, 0.22, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_color = Color(0.7, 0.28, 1, 0.6)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="sb_divider"]
+bg_color = Color(0.45, 0.12, 0.75, 0.18)
+
+[sub_resource type="StyleBoxFlat" id="sb_content"]
+bg_color = Color(0.036, 0.011, 0.074, 1)
+
+[sub_resource type="StyleBoxFlat" id="sb_searchbar"]
+content_margin_left = 24.0
+content_margin_top = 6.0
+content_margin_right = 24.0
+content_margin_bottom = 6.0
+bg_color = Color(0.05, 0.018, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.14, 0.62, 0.65)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="sb_searchbar_focus"]
+content_margin_left = 24.0
+content_margin_top = 6.0
+content_margin_right = 24.0
+content_margin_bottom = 6.0
+bg_color = Color(0.058, 0.022, 0.118, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.68, 0.24, 1, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.62, 0.2, 1, 0.22)
+shadow_size = 14
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="sb_modal_bg"]
+bg_color = Color(0.01, 0.003, 0.025, 0.88)
+
+[sub_resource type="StyleBoxFlat" id="sb_modal_card"]
+bg_color = Color(0.058, 0.022, 0.115, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.18, 0.88, 0.5)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.5, 0.12, 0.9, 0.28)
+shadow_size = 32
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxFlat" id="sb_input"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0.03, 0.01, 0.062, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28, 0.1, 0.48, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="sb_input_focus"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0.04, 0.014, 0.082, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.22, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.6, 0.18, 1, 0.14)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="sb_btn_primary"]
+bg_color = Color(0.42, 0.1, 0.82, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.5, 0.12, 0.95, 0.35)
+shadow_size = 10
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="sb_btn_primary_pressed"]
+bg_color = Color(0.35, 0.08, 0.72, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="sb_btn_primary_hover"]
+bg_color = Color(0.52, 0.15, 0.96, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.55, 0.16, 1, 0.45)
+shadow_size = 14
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="sb_btn_ghost"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.14, 0.62, 0.45)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="sb_btn_ghost_hover"]
+bg_color = Color(0.38, 0.1, 0.68, 0.1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.18, 0.85, 0.65)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="NavegadorFlux" type="Control" unique_id=108890109]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_66570")
+
+[node name="Window" type="Panel" parent="." unique_id=2056293674]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -330.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("sb_bg")
+
+[node name="Header" type="Panel" parent="." unique_id=1167545175]
+z_index = 10
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -330.0
+offset_bottom = 44.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("sb_topbar")
+
+[node name="TopLayout" type="HBoxContainer" parent="Header" unique_id=2079289423]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="BtnBack" type="Button" parent="Header/TopLayout" unique_id=1472555608]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Voltar"
+theme_override_colors/font_color = Color(0.55, 0.42, 0.78, 1)
+theme_override_colors/font_hover_color = Color(0.8, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "‹"
+
+[node name="BtnForward" type="Button" parent="Header/TopLayout" unique_id=301892384]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Avançar"
+theme_override_colors/font_color = Color(0.55, 0.42, 0.78, 1)
+theme_override_colors/font_hover_color = Color(0.8, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "›"
+
+[node name="BtnReload" type="Button" parent="Header/TopLayout" unique_id=650129691]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Recarregar"
+theme_override_colors/font_color = Color(0.55, 0.42, 0.78, 1)
+theme_override_colors/font_hover_color = Color(0.8, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "↺"
+
+[node name="StatusPill" type="PanelContainer" parent="Header/TopLayout" unique_id=2083602849]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("sb_status_pill")
+
+[node name="StatusLabel" type="Label" parent="Header/TopLayout/StatusPill" unique_id=669055029]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.88, 0.58, 1)
+theme_override_font_sizes/font_size = 11
+text = "  🔒 flux  "
+
+[node name="UrlBar" type="LineEdit" parent="Header/TopLayout" unique_id=215796384]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.85, 0.78, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.42, 0.32, 0.6, 1)
+theme_override_colors/caret_color = Color(0.72, 0.28, 1, 1)
+theme_override_colors/selection_color = Color(0.55, 0.18, 0.88, 0.35)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("sb_urlbar")
+theme_override_styles/focus = SubResource("sb_urlbar_focus")
+placeholder_text = "flux://novaguia  —  pesquise ou cole um endereço"
+
+[node name="BtnFav" type="Button" parent="Header/TopLayout" unique_id=425496442]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Favoritar"
+theme_override_colors/font_color = Color(0.42, 0.32, 0.62, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.82, 0.28, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "☆"
+
+[node name="BtnMenu" type="Button" parent="Header/TopLayout" unique_id=1385899613]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Menu"
+theme_override_colors/font_color = Color(0.55, 0.42, 0.78, 1)
+theme_override_colors/font_hover_color = Color(0.8, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "⋮"
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1291887034]
+layout_mode = 1
+offset_top = 44.0
+offset_right = 950.0
+offset_bottom = 46.0
+theme_override_styles/background = SubResource("sb_progress_bg")
+theme_override_styles/fill = SubResource("sb_progress_fill")
+show_percentage = false
+
+[node name="TabsBar" type="HBoxContainer" parent="." unique_id=354030014]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 46.0
+offset_right = 950.0
+offset_bottom = 80.0
+theme_override_constants/separation = 3
+
+[node name="TabHome" type="Button" parent="TabsBar" unique_id=478388364]
+custom_minimum_size = Vector2(148, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.72, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.88, 1, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("sb_tab_active")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_active")
+text = "  ✦  Nova guia"
+
+[node name="BtnNewTab" type="Button" parent="TabsBar" unique_id=986597974]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+tooltip_text = "Nova aba"
+theme_override_colors/font_color = Color(0.45, 0.35, 0.68, 1)
+theme_override_colors/font_hover_color = Color(0.75, 0.58, 1, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "+"
+
+[node name="TabSpacer" type="Control" parent="TabsBar" unique_id=1548209974]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TabDivider" type="Panel" parent="." unique_id=1537048578]
+layout_mode = 1
+offset_top = 80.0
+offset_right = 950.0
+offset_bottom = 81.0
+theme_override_styles/panel = SubResource("sb_divider")
+
+[node name="Content" type="Panel" parent="." unique_id=2028180247]
+layout_mode = 1
+offset_top = 81.0
+offset_right = 950.0
+offset_bottom = 550.0
+theme_override_styles/panel = SubResource("sb_content")
+
+[node name="Center" type="CenterContainer" parent="Content" unique_id=538525251]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HomeVBox" type="VBoxContainer" parent="Content/Center" unique_id=779717426]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="LogoLabel" type="Label" parent="Content/Center/HomeVBox" unique_id=216160327]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.72, 0.38, 1, 1)
+theme_override_font_sizes/font_size = 72
+text = "flux"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubLabel" type="Label" parent="Content/Center/HomeVBox" unique_id=1253672189]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.38, 0.28, 0.55, 1)
+theme_override_font_sizes/font_size = 13
+text = "navegue com intenção"
+horizontal_alignment = 1
+
+[node name="LogoSpacer" type="Control" parent="Content/Center/HomeVBox" unique_id=1079550199]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="SearchBar" type="LineEdit" parent="Content/Center/HomeVBox" unique_id=1011339686]
+custom_minimum_size = Vector2(540, 56)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.86, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.38, 0.28, 0.58, 1)
+theme_override_colors/caret_color = Color(0.72, 0.28, 1, 1)
+theme_override_colors/selection_color = Color(0.55, 0.18, 0.88, 0.35)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("sb_searchbar")
+theme_override_styles/focus = SubResource("sb_searchbar_focus")
+placeholder_text = "         🔍  pesquise ou digite um endereço"
+
+[node name="QuickRow" type="HBoxContainer" parent="Content/Center/HomeVBox" unique_id=263436497]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ChipFlux" type="Button" parent="Content/Center/HomeVBox/QuickRow" unique_id=1065900374]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.42, 0.8, 1)
+theme_override_colors/font_hover_color = Color(0.82, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "  ✦ Início  "
+
+[node name="ChipRecent" type="Button" parent="Content/Center/HomeVBox/QuickRow" unique_id=1604841159]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.42, 0.8, 1)
+theme_override_colors/font_hover_color = Color(0.82, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "  ⏱ Recentes  "
+
+[node name="ChipFavs" type="Button" parent="Content/Center/HomeVBox/QuickRow" unique_id=1432602478]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.42, 0.8, 1)
+theme_override_colors/font_hover_color = Color(0.82, 0.65, 1, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("sb_tab_normal")
+theme_override_styles/pressed = SubResource("sb_tab_active")
+theme_override_styles/hover = SubResource("sb_tab_hover")
+text = "  ☆ Favoritos  "
+
+[node name="LoginModal" type="Panel" parent="." unique_id=1574212828]
+visible = false
+z_index = 100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("sb_modal_bg")
+
+[node name="ModalCenter" type="CenterContainer" parent="LoginModal" unique_id=1601375890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Card" type="PanelContainer" parent="LoginModal/ModalCenter" unique_id=1781643512]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_modal_card")
+
+[node name="CardMargin" type="MarginContainer" parent="LoginModal/ModalCenter/Card" unique_id=2051496763]
+layout_mode = 2
+theme_override_constants/margin_left = 44
+theme_override_constants/margin_top = 44
+theme_override_constants/margin_right = 44
+theme_override_constants/margin_bottom = 44
+
+[node name="CardVBox" type="VBoxContainer" parent="LoginModal/ModalCenter/Card/CardMargin" unique_id=117578895]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="CardLogo" type="Label" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=113400839]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68, 0.32, 1, 0.9)
+theme_override_font_sizes/font_size = 28
+text = "flux"
+horizontal_alignment = 1
+
+[node name="ModalTitle" type="Label" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=348883574]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 19
+text = "Acesse sua conta"
+horizontal_alignment = 1
+
+[node name="ModalSub" type="Label" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=424433646]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45, 0.35, 0.62, 1)
+theme_override_font_sizes/font_size = 12
+text = "Para pesquisar, entre na sua conta Flux"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ModalDivider" type="Panel" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=1912730664]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_divider")
+
+[node name="LabelEmail" type="Label" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=1042785490]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.5, 0.82, 1)
+theme_override_font_sizes/font_size = 11
+text = "E-MAIL"
+
+[node name="InputEmail" type="LineEdit" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=438080055]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.86, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.35, 0.26, 0.52, 1)
+theme_override_colors/caret_color = Color(0.72, 0.28, 1, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("sb_input")
+theme_override_styles/focus = SubResource("sb_input_focus")
+placeholder_text = "seu@email.com"
+
+[node name="LabelSenha" type="Label" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=1912422095]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.5, 0.82, 1)
+theme_override_font_sizes/font_size = 11
+text = "SENHA"
+
+[node name="InputSenha" type="LineEdit" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=903688955]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.86, 1, 1)
+theme_override_colors/font_placeholder_color = Color(0.35, 0.26, 0.52, 1)
+theme_override_colors/caret_color = Color(0.72, 0.28, 1, 1)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("sb_input")
+theme_override_styles/focus = SubResource("sb_input_focus")
+placeholder_text = "••••••••••"
+secret = true
+
+[node name="BtnSpacer" type="Control" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=879676385]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="BtnLogin" type="Button" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=1855388186]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("sb_btn_primary")
+theme_override_styles/pressed = SubResource("sb_btn_primary_pressed")
+theme_override_styles/hover = SubResource("sb_btn_primary_hover")
+text = "Entrar"
+
+[node name="BtnFechar" type="Button" parent="LoginModal/ModalCenter/Card/CardMargin/CardVBox" unique_id=1195709823]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.48, 0.36, 0.68, 1)
+theme_override_colors/font_hover_color = Color(0.72, 0.58, 0.95, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("sb_btn_ghost")
+theme_override_styles/pressed = SubResource("sb_btn_ghost")
+theme_override_styles/hover = SubResource("sb_btn_ghost_hover")
+text = "Cancelar"

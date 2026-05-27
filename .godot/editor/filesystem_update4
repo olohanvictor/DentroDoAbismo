@@ -1,8 +1,5 @@
-res://windows/FluxNavegador/NavegadorFlux.tscn
-res://scripts/windows/NavegadorFlux/navegador_flux.gd
-res://windows/Spotilite/Spotilite.tscn
-res://windows/Config/Configuracoes.tscn
-res://scripts/window.gd
-res://scripts/screens/Desktop/desktop.gd
-res://windows/Configuracao/configuracoes.tscn
-res://scripts/windows/Configuracao/configuracoes.gd
+res://windows/iMessage/iMessage.tscn
+res://styles/imessage/buttons/chatrecente.tres
+res://styles/imessage/buttons/nomecontatochat.tres
+res://styles/imessage/chatmessages/contmsg.tres
+res://styles/imessage/chatmessages/usermsg.tres

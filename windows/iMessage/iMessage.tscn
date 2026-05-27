@@ -10,31 +10,55 @@
 [ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="8_tyaus"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14atv"]
-bg_color = Color(0.8446132, 0.84461373, 0.84461343, 1)
+bg_color = Color(0.078431375, 0.05882353, 0.101960786, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsq2e"]
-bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+bg_color = Color(0.007843138, 0.003921569, 0.015686275, 0.64705884)
 corner_radius_top_right = 15
+corner_radius_bottom_right = 15
 
 [sub_resource type="SystemFont" id="SystemFont_ihasx"]
 subpixel_positioning = 0
 
-[sub_resource type="SystemFont" id="SystemFont_8kja4"]
-subpixel_positioning = 0
+[sub_resource type="SystemFont" id="SystemFont_563mw"]
+
+[sub_resource type="FontVariation" id="FontVariation_mr56i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_563mw"]
+bg_color = Color(0.1764706, 0.13333334, 0.23529412, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.21960784, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.09411765, 0.09411765, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mr56i"]
+bg_color = Color(0.21568628, 0.21568628, 0.2901961, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuidj"]
 content_margin_left = 8.0
 content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
-bg_color = Color(0.41960785, 0.41960785, 0.41960785, 0.76862746)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+content_margin_right = 30.0
+bg_color = Color(0.14509805, 0.10980392, 0.1882353, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcfks"]
+bg_color = Color(0.21568628, 0.21568628, 0.2901961, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3poo"]
-bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+bg_color = Color(0.078431375, 0.05882353, 0.101960786, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -45,6 +69,7 @@ content_margin_left = 5.0
 content_margin_top = 3.0
 content_margin_right = 5.0
 content_margin_bottom = 3.0
+bg_color = Color(0.522, 0.311, 1.16, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -91,7 +116,7 @@ offset_left = 82.0
 offset_top = 41.0
 offset_right = 218.0
 offset_bottom = 83.0
-theme_override_colors/font_color = Color(0, 0.2901961, 0.8117647, 1)
+theme_override_colors/font_color = Color(0.65882355, 0.33333334, 0.96862745, 1)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 30
 text = "iMessage"
@@ -102,9 +127,9 @@ offset_left = 70.0
 offset_top = 151.0
 offset_right = 154.0
 offset_bottom = 164.0
-theme_override_colors/font_color = Color(0.63412154, 0.65070903, 0.67384005, 1)
-theme_override_fonts/font = SubResource("SystemFont_ihasx")
-theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(1.4151617, 1.4439856, 1.4958686, 0.9490196)
+theme_override_fonts/font = SubResource("SystemFont_563mw")
+theme_override_font_sizes/font_size = 12
 text = "conversas recentes"
 
 [node name="Search" type="LineEdit" parent="Window" unique_id=1543587479]
@@ -113,19 +138,24 @@ offset_left = 63.0
 offset_top = 102.0
 offset_right = 309.0
 offset_bottom = 133.0
-theme_override_fonts/font = SubResource("SystemFont_8kja4")
-theme_override_font_sizes/font_size = 10
-placeholder_text = "com quem você quer falar hoje?"
+theme_override_colors/font_color = Color(0.4862745, 0.4862745, 0.5686275, 1)
+theme_override_colors/font_placeholder_color = Color(0.4862745, 0.4862745, 0.5686275, 1)
+theme_override_fonts/font = SubResource("FontVariation_mr56i")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_563mw")
+placeholder_text = "Com quem você quer falar hoje?"
+alignment = 1
 
 [node name="contact1" type="Button" parent="Window" unique_id=1041867794]
 layout_mode = 0
 offset_left = 60.0
 offset_top = 170.0
 offset_right = 310.0
-offset_bottom = 210.0
+offset_bottom = 215.0
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = ExtResource("1_5wbg7")
-text = " Rodrigo"
+theme_override_styles/hover = SubResource("StyleBoxFlat_mr56i")
+text = "Rodrigo"
 icon = ExtResource("2_qsq2e")
 alignment = 0
 expand_icon = true
@@ -135,9 +165,10 @@ layout_mode = 0
 offset_left = 60.0
 offset_top = 220.0
 offset_right = 310.0
-offset_bottom = 260.0
+offset_bottom = 265.0
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxFlat_iuidj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qcfks")
 text = "Laura
 "
 icon = ExtResource("2_qsq2e")
@@ -181,7 +212,7 @@ offset_right = 32.0
 offset_bottom = -170.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(4.165, 4.165, 3.2238235, 0.9411765)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_pq6ll")
@@ -211,8 +242,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = ExtResource("5_pq6ll")
-text = "Não me mande mais mensagens por aqui. 
-Você já sabe por onde se comunicar comigo."
+text = "Não me mande mais mensagens por aqui. Você já sabe por onde se comunicar comigo."
 horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 3
@@ -224,6 +254,7 @@ offset_top = 233.0
 offset_right = 600.0
 offset_bottom = 266.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 2
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = ExtResource("5_pq6ll")

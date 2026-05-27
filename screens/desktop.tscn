@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://2k7uedjq6ea2" path="res://assets/icons/apps/email.png" id="8_dk1sk"]
 [ext_resource type="Texture2D" uid="uid://c8odjrpb5c4em" path="res://assets/icons/apps/explorer.png" id="9_gei7d"]
 [ext_resource type="PackedScene" uid="uid://fivmf77wneoq" path="res://windows/iMessage/iMessage.tscn" id="9_nnwum"]
-[ext_resource type="PackedScene" uid="uid://bwesns0hb6pld" path="res://windows/eMail/eMail.tscn" id="11_ulj47"]
+[ext_resource type="PackedScene" uid="uid://bht0k1hrssa4v" path="res://windows/eMail/eMail.tscn" id="11_ulj47"]
 [ext_resource type="PackedScene" uid="uid://hldttb1pmu8j" path="res://windows/Explorer/Explorer.tscn" id="13_jcvbf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw0pb"]

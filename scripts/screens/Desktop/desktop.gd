@@ -1,7 +1,7 @@
 extends Control
 
 @onready var appspanels = {
-	$Wifi: $WifiPanel,
+	$Topbar/Wifi: $WifiPanel,
 	$Dock/iMessage: $iMessagePanel,
 	$Dock/eMail: $eMailPanel,
 	$Dock/Explorer: $ExplorerPanel

@@ -4,15 +4,26 @@
 [ext_resource type="Script" uid="uid://bigydr8uoiabd" path="res://scripts/screens/Desktop/desktop.gd" id="1_ulj47"]
 [ext_resource type="Texture2D" uid="uid://g1d4gskgv4ao" path="res://assets/icons/system/wifi.png" id="2_mw0pb"]
 [ext_resource type="Texture2D" uid="uid://d3qw7xikyuu42" path="res://assets/icons/system/arch.png" id="3_hv8wt"]
+[ext_resource type="Texture2D" uid="uid://ds04kxb05frnj" path="res://assets/icons/system/gear.png" id="4_j7byd"]
+[ext_resource type="Script" uid="uid://3mc6rqxjo75h" path="res://scripts/clock.gd" id="4_k04pa"]
+[ext_resource type="FontFile" uid="uid://dnpnaixi8uqmf" path="res://assets/fonts/Clear Sans/ClearSans-Bold.ttf" id="4_lyf8e"]
 [ext_resource type="Texture2D" uid="uid://d2q32ojcxx6ly" path="res://assets/icons/apps/iMessage.png" id="4_nnwum"]
-[ext_resource type="Texture2D" uid="uid://b1p3380awnrj1" path="res://assets/icons/apps/browser.webp" id="4_yncng"]
+[ext_resource type="Texture2D" uid="uid://dbsk4ghipklae" path="res://assets/icons/system/usersys.png" id="5_j7byd"]
 [ext_resource type="Texture2D" uid="uid://c3cfv01f85dpn" path="res://assets/icons/system/search.png" id="5_nnwum"]
 [ext_resource type="PackedScene" uid="uid://b4mdiphq2iygt" path="res://windows/Wifi/Wifi.tscn" id="6_mw0pb"]
 [ext_resource type="Texture2D" uid="uid://2k7uedjq6ea2" path="res://assets/icons/apps/email.png" id="8_dk1sk"]
 [ext_resource type="Texture2D" uid="uid://c8odjrpb5c4em" path="res://assets/icons/apps/explorer.png" id="9_gei7d"]
 [ext_resource type="PackedScene" uid="uid://fivmf77wneoq" path="res://windows/iMessage/iMessage.tscn" id="9_nnwum"]
+[ext_resource type="Texture2D" uid="uid://d28h2m8qbafym" path="res://assets/icons/apps/browser.png" id="10_2ef6j"]
 [ext_resource type="PackedScene" uid="uid://bwesns0hb6pld" path="res://windows/eMail/eMail.tscn" id="11_ulj47"]
 [ext_resource type="PackedScene" uid="uid://hldttb1pmu8j" path="res://windows/Explorer/Explorer.tscn" id="13_jcvbf"]
+[ext_resource type="Texture2D" uid="uid://dqnxi2kqd8wbu" path="res://assets/icons/apps/spotlite.png" id="14_xyygd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcvbf"]
+bg_color = Color(0.79607844, 0.79607844, 0.79607844, 0.6039216)
+border_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw0pb"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -37,13 +48,9 @@ expand_margin_top = 3.0
 expand_margin_right = 3.0
 expand_margin_bottom = 3.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nnwum"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhfxg"]
-bg_color = Color(0.79607844, 0.79607844, 0.79607844, 0.18431373)
-border_width_top = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 0.4745098)
+bg_color = Color(0.79607844, 0.79607844, 0.79607844, 0.6039216)
+border_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -71,13 +78,97 @@ offset_bottom = 720.0
 texture = ExtResource("1_dhfxg")
 expand_mode = 2
 
-[node name="Wifi" type="Button" parent="." unique_id=433189964]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1253.0
-offset_top = 5.0
-offset_right = 1267.0
-offset_bottom = 19.0
+[node name="Topbar" type="Panel" parent="." unique_id=1227885116]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = -335.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcvbf")
+
+[node name="Config" type="Button" parent="Topbar" unique_id=2041029833]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 439.0
+offset_top = -8.0
+offset_right = 455.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mw0pb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hv8wt")
+icon = ExtResource("4_j7byd")
+text_overrun_behavior = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
+
+[node name="Search" type="Button" parent="Topbar" unique_id=1402729294]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 416.0
+offset_top = -7.0
+offset_right = 430.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mw0pb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hv8wt")
+icon = ExtResource("5_nnwum")
+text_overrun_behavior = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
+
+[node name="User" type="Button" parent="Topbar" unique_id=433189964]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 391.0
+offset_top = -8.0
+offset_right = 407.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mw0pb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hv8wt")
+icon = ExtResource("5_j7byd")
+text_overrun_behavior = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
+
+[node name="Wifi" type="Button" parent="Topbar" unique_id=1376531621]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 367.0
+offset_top = -8.0
+offset_right = 383.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_mw0pb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hv8wt")
 icon = ExtResource("2_mw0pb")
@@ -85,6 +176,26 @@ text_overrun_behavior = 1
 autowrap_trim_flags = 0
 icon_alignment = 1
 expand_icon = true
+
+[node name="Clock" type="Label" parent="Topbar" unique_id=575855128]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 487.0
+offset_top = -8.5
+offset_right = 619.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_lyf8e")
+theme_override_font_sizes/font_size = 12
+text = "Qua, 27 de maio   10:45"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_k04pa")
 
 [node name="Arch" type="Button" parent="." unique_id=101778248]
 layout_mode = 0
@@ -99,43 +210,29 @@ autowrap_trim_flags = 0
 icon_alignment = 1
 expand_icon = true
 
-[node name="Search" type="Button" parent="." unique_id=1803785318]
-layout_mode = 0
-offset_left = 946.0
-offset_top = 678.0
-offset_right = 980.0
-offset_bottom = 712.0
-theme_override_styles/hover = SubResource("StyleBoxFlat_nnwum")
-icon = ExtResource("5_nnwum")
-flat = true
-text_overrun_behavior = 1
-autowrap_trim_flags = 0
-icon_alignment = 1
-expand_icon = true
-
 [node name="Dock" type="Panel" parent="." unique_id=2121377197]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -375.0
-offset_top = -50.0
+offset_top = 290.0
 offset_right = 375.0
+offset_bottom = 350.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_dhfxg")
 
 [node name="Browser" type="Button" parent="Dock" unique_id=1312941428]
-unique_name_in_owner = true
 layout_mode = 0
-offset_left = 8.0
-offset_top = 6.0
-offset_right = 48.0
-offset_bottom = 46.0
+offset_left = 13.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 55.0
 theme_override_styles/hover = SubResource("StyleBoxFlat_yncng")
-icon = ExtResource("4_yncng")
+icon = ExtResource("10_2ef6j")
 flat = true
 text_overrun_behavior = 1
 autowrap_trim_flags = 0
@@ -143,12 +240,11 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="iMessage" type="Button" parent="Dock" unique_id=1356424238]
-unique_name_in_owner = true
 layout_mode = 0
-offset_left = 56.0
-offset_top = 6.0
-offset_right = 96.0
-offset_bottom = 46.0
+offset_left = 74.0
+offset_top = 5.0
+offset_right = 124.0
+offset_bottom = 55.0
 theme_override_styles/hover = SubResource("StyleBoxFlat_yncng")
 icon = ExtResource("4_nnwum")
 flat = true
@@ -158,12 +254,11 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="eMail" type="Button" parent="Dock" unique_id=1029435559]
-unique_name_in_owner = true
 layout_mode = 0
-offset_left = 104.0
-offset_top = 6.0
-offset_right = 144.0
-offset_bottom = 46.0
+offset_left = 138.0
+offset_top = 5.0
+offset_right = 188.0
+offset_bottom = 55.0
 theme_override_styles/hover = SubResource("StyleBoxFlat_yncng")
 icon = ExtResource("8_dk1sk")
 flat = true
@@ -173,14 +268,27 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Explorer" type="Button" parent="Dock" unique_id=1709956908]
-unique_name_in_owner = true
 layout_mode = 0
-offset_left = 152.0
-offset_top = 6.0
-offset_right = 192.0
-offset_bottom = 46.0
+offset_left = 199.0
+offset_top = 5.0
+offset_right = 249.0
+offset_bottom = 55.0
 theme_override_styles/hover = SubResource("StyleBoxFlat_yncng")
 icon = ExtResource("9_gei7d")
+flat = true
+text_overrun_behavior = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
+
+[node name="Music" type="Button" parent="Dock" unique_id=41655632]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 5.0
+offset_right = 308.0
+offset_bottom = 55.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_yncng")
+icon = ExtResource("14_xyygd")
 flat = true
 text_overrun_behavior = 1
 autowrap_trim_flags = 0
@@ -190,10 +298,10 @@ expand_icon = true
 [node name="WifiPanel" parent="." unique_id=334306751 instance=ExtResource("6_mw0pb")]
 visible = false
 layout_mode = 1
-offset_left = 430.0
-offset_top = -335.0
-offset_right = 630.0
-offset_bottom = -85.0
+offset_left = 189.0
+offset_top = -330.0
+offset_right = 389.0
+offset_bottom = -80.0
 
 [node name="iMessagePanel" parent="." unique_id=880441717 instance=ExtResource("9_nnwum")]
 visible = false

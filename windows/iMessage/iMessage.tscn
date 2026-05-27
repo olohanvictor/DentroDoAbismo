@@ -1,0 +1,283 @@
+[gd_scene format=3 uid="uid://fivmf77wneoq"]
+
+[ext_resource type="StyleBox" uid="uid://b657fpqbigs1b" path="res://styles/imessage/buttons/chatrecente.tres" id="1_5wbg7"]
+[ext_resource type="Script" uid="uid://do2wbq8swy7xk" path="res://scripts/windows/iMessage/imessage.gd" id="1_pq6ll"]
+[ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="2_mjm2s"]
+[ext_resource type="Texture2D" uid="uid://f7pfyg1djgu3" path="res://assets/circulo.png" id="2_qsq2e"]
+[ext_resource type="StyleBox" uid="uid://xxu56f0xcybs" path="res://styles/imessage/buttons/nomecontatochat.tres" id="3_qsq2e"]
+[ext_resource type="StyleBox" uid="uid://cllbres8xyy48" path="res://styles/imessage/chatmessages/contmsg.tres" id="4_pqgkq"]
+[ext_resource type="StyleBox" uid="uid://cqgurolj5uhup" path="res://styles/imessage/chatmessages/usermsg.tres" id="5_pq6ll"]
+[ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="8_tyaus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14atv"]
+bg_color = Color(0.8446132, 0.84461373, 0.84461343, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsq2e"]
+bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+corner_radius_top_right = 15
+
+[sub_resource type="SystemFont" id="SystemFont_ihasx"]
+subpixel_positioning = 0
+
+[sub_resource type="SystemFont" id="SystemFont_8kja4"]
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuidj"]
+content_margin_left = 8.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.41960785, 0.41960785, 0.41960785, 0.76862746)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3poo"]
+bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq6ll"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+content_margin_bottom = 3.0
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="iMessagePanel" type="Control" unique_id=880441717]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_pq6ll")
+
+[node name="Window" type="Panel" parent="." unique_id=1585565303]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -475.0
+offset_top = -275.0
+offset_right = 475.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_14atv")
+script = ExtResource("2_mjm2s")
+
+[node name="Sidebar" type="Panel" parent="Window" unique_id=2078188108]
+layout_mode = 1
+offset_right = 50.0
+offset_bottom = 550.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qsq2e")
+
+[node name="iMessage" type="Label" parent="Window" unique_id=58319367]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 41.0
+offset_right = 218.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0.2901961, 0.8117647, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 30
+text = "iMessage"
+
+[node name="ConversasRecentes" type="Label" parent="Window" unique_id=230426454]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 151.0
+offset_right = 154.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.63412154, 0.65070903, 0.67384005, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 9
+text = "conversas recentes"
+
+[node name="Search" type="LineEdit" parent="Window" unique_id=1543587479]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 102.0
+offset_right = 309.0
+offset_bottom = 133.0
+theme_override_fonts/font = SubResource("SystemFont_8kja4")
+theme_override_font_sizes/font_size = 10
+placeholder_text = "com quem você quer falar hoje?"
+
+[node name="contact1" type="Button" parent="Window" unique_id=1041867794]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 170.0
+offset_right = 310.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("1_5wbg7")
+text = " Rodrigo"
+icon = ExtResource("2_qsq2e")
+alignment = 0
+expand_icon = true
+
+[node name="contact2" type="Button" parent="Window" unique_id=786028371]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 220.0
+offset_right = 310.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_iuidj")
+text = "Laura
+"
+icon = ExtResource("2_qsq2e")
+alignment = 0
+expand_icon = true
+
+[node name="ChatRodrigo" type="Panel" parent="Window" unique_id=1031760954]
+visible = false
+layout_mode = 1
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 940.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d3poo")
+
+[node name="NomeContatoChat" type="Button" parent="Window/ChatRodrigo" unique_id=741982340]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 610.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("3_qsq2e")
+theme_override_styles/pressed = ExtResource("3_qsq2e")
+theme_override_styles/hover = ExtResource("3_qsq2e")
+text = " Rodrigo"
+icon = ExtResource("2_qsq2e")
+alignment = 0
+expand_icon = true
+
+[node name="DataDialogo" type="Label" parent="Window/ChatRodrigo" unique_id=296612969]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -190.0
+offset_right = 32.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_pq6ll")
+text = "16 de Maio"
+
+[node name="Mensagem1" type="Label" parent="Window/ChatRodrigo" unique_id=1022824565]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 115.0
+offset_right = 144.0
+offset_bottom = 148.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("4_pqgkq")
+text = "E aí, pingou o pix?"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mensagem2" type="Label" parent="Window/ChatRodrigo" unique_id=1866127396]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 170.0
+offset_right = 600.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("5_pq6ll")
+text = "Não me mande mais mensagens por aqui. 
+Você já sabe por onde se comunicar comigo."
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mensagem3" type="Label" parent="Window/ChatRodrigo" unique_id=1628913721]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 233.0
+offset_right = 600.0
+offset_bottom = 266.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("5_pq6ll")
+text = "Lembre-se de apagar as mensagens. Todas."
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ChatLaura" type="Panel" parent="Window" unique_id=779437882]
+visible = false
+layout_mode = 1
+offset_left = 320.0
+offset_top = 10.0
+offset_right = 940.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d3poo")
+
+[node name="NomeContatoChat" type="Button" parent="Window/ChatLaura" unique_id=303766322]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 610.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("3_qsq2e")
+theme_override_styles/pressed = ExtResource("3_qsq2e")
+theme_override_styles/hover = ExtResource("3_qsq2e")
+text = " Laura"
+icon = ExtResource("2_qsq2e")
+alignment = 0
+expand_icon = true
+
+[node name="Aviso" type="Label" parent="Window/ChatLaura" unique_id=1379768607]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.0
+offset_top = 75.0
+offset_right = 117.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_pq6ll")
+text = "Parece que não tem nada por aqui :(
+Que tal enviar uma mensagem para começar?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("8_tyaus")]
+layout_mode = 1
+offset_top = -30.0
+offset_bottom = 0.0
+
+[connection signal="gui_input" from="Window/TopBar" to="Window" method="_on_topbar_gui_input"]

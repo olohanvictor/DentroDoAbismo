@@ -1,0 +1,3 @@
+res://screens/desktop.tscn
+res://scripts/screens/Desktop/desktop.gd
+res://windows/Explorer/Explorer.tscn

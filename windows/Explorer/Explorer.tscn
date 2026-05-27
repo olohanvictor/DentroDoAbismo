@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://hldttb1pmu8j"]
+
+[ext_resource type="Script" uid="uid://c8gc4exww7a4v" path="res://scripts/windows/Explorer/explorer.gd" id="1_8gf4t"]
+[ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="2_soim6"]
+[ext_resource type="Texture2D" uid="uid://yg48w5jc12e" path="res://assets/appsicons/Explorer/folder.png" id="3_0tpm6"]
+[ext_resource type="StyleBox" uid="uid://b657fpqbigs1b" path="res://styles/imessage/buttons/chatrecente.tres" id="4_63l2p"]
+[ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="5_meu27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kldyh"]
+bg_color = Color(0.87441623, 0.91330624, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ft1o"]
+bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+corner_radius_top_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsxq7"]
+content_margin_left = 8.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.41960785, 0.41960785, 0.41960785, 0.76862746)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dydum"]
+bg_color = Color(0.40631357, 0.57699525, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qr0w"]
+bg_color = Color(0.8745098, 0.9137255, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wabkf"]
+
+[node name="ExplorerPanel" type="Control" unique_id=475149261]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_8gf4t")
+
+[node name="Window" type="Panel" parent="." unique_id=1457848082]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -475.0
+offset_top = -275.0
+offset_right = 475.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kldyh")
+script = ExtResource("2_soim6")
+
+[node name="Sidebar" type="Panel" parent="Window" unique_id=255795137]
+layout_mode = 0
+offset_right = 155.0
+offset_bottom = 550.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ft1o")
+
+[node name="folder1" type="Button" parent="Window/Sidebar" unique_id=1500321928]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 62.0
+offset_right = 154.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_rsxq7")
+text = "Downloads
+
+"
+icon = ExtResource("3_0tpm6")
+alignment = 0
+expand_icon = true
+
+[node name="folder2" type="Button" parent="Window/Sidebar" unique_id=1542251996]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 24.0
+offset_right = 153.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_63l2p")
+text = "Desktop
+"
+icon = ExtResource("3_0tpm6")
+alignment = 0
+expand_icon = true
+
+[node name="folder3" type="Button" parent="Window/Sidebar" unique_id=82865971]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 173.0
+offset_right = 152.0
+offset_bottom = 205.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_63l2p")
+text = "Documentos
+"
+icon = ExtResource("3_0tpm6")
+alignment = 0
+expand_icon = true
+
+[node name="folder4" type="Button" parent="Window/Sidebar" unique_id=1124707873]
+layout_mode = 0
+offset_top = 137.0
+offset_right = 153.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_63l2p")
+text = "Imagens"
+icon = ExtResource("3_0tpm6")
+alignment = 0
+expand_icon = true
+
+[node name="folder5" type="Button" parent="Window/Sidebar" unique_id=530030127]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 101.0
+offset_right = 154.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_63l2p")
+text = "Vídeos"
+icon = ExtResource("3_0tpm6")
+alignment = 0
+expand_icon = true
+
+[node name="folder6" type="Button" parent="Window/Sidebar" unique_id=497087839]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 457.0
+offset_right = 156.0
+offset_bottom = 489.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_63l2p")
+text = "Este Computador"
+icon = ExtResource("3_0tpm6")
+alignment = 0
+expand_icon = true
+
+[node name="folder7" type="Button" parent="Window/Sidebar" unique_id=999831533]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 494.0
+offset_right = 154.0
+offset_bottom = 526.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("4_63l2p")
+text = " Lixeira"
+icon = ExtResource("3_0tpm6")
+alignment = 0
+expand_icon = true
+
+[node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("5_meu27")]
+layout_mode = 1
+offset_top = -30.0
+offset_bottom = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dydum")
+
+[node name="Downloads" type="Panel" parent="Window" unique_id=458402216]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 7.0
+offset_right = 946.0
+offset_bottom = 542.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1qr0w")
+
+[node name="Button3" type="Button" parent="Window/Downloads" unique_id=97071769]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 0.5
+anchor_right = 0.48400003
+anchor_bottom = 0.5
+offset_left = -14.424011
+offset_top = -244.5
+offset_right = 75.57599
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
+
+[node name="Button2" type="Button" parent="Window/Downloads" unique_id=1215502057]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 0.5
+anchor_right = 0.48400003
+anchor_bottom = 0.5
+offset_left = -244.42401
+offset_top = -246.5
+offset_right = -154.42401
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
+
+[node name="Button" type="Button" parent="Window/Downloads" unique_id=375543689]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 0.5
+anchor_right = 0.48400003
+anchor_bottom = 0.5
+offset_left = -354.424
+offset_top = -244.5
+offset_right = -264.424
+offset_bottom = -163.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
+
+[node name="Button5" type="Button" parent="Window/Downloads" unique_id=906367624]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 0.5
+anchor_right = 0.48400003
+anchor_bottom = 0.5
+offset_left = -132.42401
+offset_top = -246.5
+offset_right = -42.42401
+offset_bottom = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
+
+[node name="Button4" type="Button" parent="Window/Downloads" unique_id=55644291]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 0.5
+anchor_right = 0.48400003
+anchor_bottom = 0.5
+offset_left = -356.424
+offset_top = -138.5
+offset_right = -266.424
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
+
+[connection signal="pressed" from="Window/Sidebar/folder2" to="." method="_on_folder_2_pressed"]
+[connection signal="gui_input" from="Window/TopBar" to="Window" method="_on_top_bar_gui_input"]

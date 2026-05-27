@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://vuvjvyfo3nxv"]
+
+[ext_resource type="FontFile" uid="uid://ba7in05ewb8xh" path="res://assets/fonts/HevelticaNeue/HelveticaNeueMedium.otf" id="1_weiru"]
+[ext_resource type="FontFile" uid="uid://ctmhtc1jfiq10" path="res://assets/fonts/HevelticaNeue/HelveticaNeueBold.otf" id="2_0glbr"]
+[ext_resource type="Script" uid="uid://bxqevu5n5hsm7" path="res://scripts/components/Falas/falas.gd" id="2_tjqdu"]
+[ext_resource type="StyleBox" uid="uid://5sj4x56lqt0y" path="res://styles/Falas/Label.tres" id="3_24nou"]
+
+[node name="Falas" type="RichTextLabel" unique_id=1033649247]
+custom_minimum_size = Vector2(350, 25)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -12.5
+offset_right = 175.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("1_weiru")
+theme_override_fonts/bold_font = ExtResource("2_0glbr")
+theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/bold_font_size = 14
+theme_override_styles/normal = ExtResource("3_24nou")
+bbcode_enabled = true
+text = "Você: acho que eu não deveria abrir isso..."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_tjqdu")

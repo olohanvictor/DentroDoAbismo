@@ -1,19 +1,22 @@
-[gd_scene format=3 uid="uid://hldttb1pmu8j"]
+[gd_scene format=3 uid="uid://bpcxyejjda4fo"]
 
-[ext_resource type="Script" uid="uid://c8gc4exww7a4v" path="res://scripts/windows/Explorer/explorer.gd" id="1_8gf4t"]
-[ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="2_soim6"]
-[ext_resource type="Texture2D" uid="uid://cx5d7dxt3n21c" path="res://assets/appsicons/Explorer/desktop/sidebar.png" id="3_soim6"]
-[ext_resource type="StyleBox" uid="uid://b657fpqbigs1b" path="res://styles/imessage/buttons/chatrecente.tres" id="4_63l2p"]
-[ext_resource type="Script" uid="uid://cln0vp7ynxkhd" path="res://windows/Explorer/folder_1.gd" id="4_ases5"]
-[ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="5_meu27"]
-[ext_resource type="Script" uid="uid://bkvkybxqdj3l3" path="res://windows/Explorer/arquivo1.gd" id="6_6ngvn"]
-[ext_resource type="Script" uid="uid://dkdh5mt2fvrid" path="res://windows/Explorer/folder_2.gd" id="6_ixur3"]
-[ext_resource type="Script" uid="uid://yxmilm7f64ni" path="res://windows/Explorer/folder_3.gd" id="6_wvllp"]
-[ext_resource type="Texture2D" uid="uid://bs0v6d5kr28ut" path="res://assets/appsicons/Explorer/desktop/arquivos1.png" id="7_63l2p"]
-[ext_resource type="Texture2D" uid="uid://dksqwou8et86t" path="res://assets/appsicons/Explorer/Documentos/sidebar-docs.png" id="7_ixur3"]
-[ext_resource type="Texture2D" uid="uid://dk6sig8ous4va" path="res://assets/appsicons/Explorer/desktop/visualizador_vazio.png" id="8_meu27"]
-[ext_resource type="Texture2D" uid="uid://rt1auwiful2x" path="res://assets/appsicons/Explorer/desktop/invalido.png" id="12_ases5"]
-[ext_resource type="Texture2D" uid="uid://dvvbmjgsmd1pn" path="res://assets/appsicons/Explorer/desktop/arquivos2.png" id="12_ixur3"]
+[ext_resource type="Script" uid="uid://c8gc4exww7a4v" path="res://scripts/windows/Explorer/explorer.gd" id="1_apt6x"]
+[ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="2_ox2yw"]
+[ext_resource type="StyleBox" uid="uid://b657fpqbigs1b" path="res://styles/imessage/buttons/chatrecente.tres" id="3_8e0aw"]
+[ext_resource type="Script" uid="uid://cln0vp7ynxkhd" path="res://windows/Explorer/folder_1.gd" id="4_lfjtp"]
+[ext_resource type="Script" uid="uid://dkdh5mt2fvrid" path="res://windows/Explorer/folder_2.gd" id="5_iomaa"]
+[ext_resource type="Script" uid="uid://yxmilm7f64ni" path="res://windows/Explorer/folder_3.gd" id="6_y36nv"]
+[ext_resource type="Texture2D" uid="uid://cx5d7dxt3n21c" path="res://assets/appsicons/Explorer/desktop/sidebar.png" id="7_w8fn5"]
+[ext_resource type="Texture2D" uid="uid://dksqwou8et86t" path="res://assets/appsicons/Explorer/Documentos/sidebar-docs.png" id="8_2xcxe"]
+[ext_resource type="Texture2D" uid="uid://codqjl5ynam1" path="res://assets/appsicons/Explorer/Downloads/sidebar4.png" id="9_yuf8g"]
+[ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="10_0waaj"]
+[ext_resource type="Script" uid="uid://bkvkybxqdj3l3" path="res://windows/Explorer/arquivo1.gd" id="11_c03e7"]
+[ext_resource type="Texture2D" uid="uid://ba4gnr525hm4o" path="res://assets/appsicons/Explorer/Downloads/jogo.png" id="12_ox2yw"]
+[ext_resource type="Texture2D" uid="uid://bs0v6d5kr28ut" path="res://assets/appsicons/Explorer/desktop/arquivos1.png" id="13_2q4xt"]
+[ext_resource type="Texture2D" uid="uid://c7hlbgk8kjt6p" path="res://assets/appsicons/Explorer/Downloads/jojo.png" id="13_8e0aw"]
+[ext_resource type="Texture2D" uid="uid://dvvbmjgsmd1pn" path="res://assets/appsicons/Explorer/desktop/arquivos2.png" id="14_idakg"]
+[ext_resource type="Texture2D" uid="uid://rt1auwiful2x" path="res://assets/appsicons/Explorer/desktop/invalido.png" id="16_0i4oa"]
+[ext_resource type="Texture2D" uid="uid://ckco2ws1jrciv" path="res://assets/appsicons/Explorer/Downloads/arquivo8.png" id="16_lfjtp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kldyh"]
 bg_color = Color(0.87441623, 0.91330624, 1, 1)
@@ -43,7 +46,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_8gf4t")
+script = ExtResource("1_apt6x")
 
 [node name="Window" type="Panel" parent="." unique_id=1457848082]
 layout_mode = 1
@@ -59,7 +62,7 @@ offset_bottom = 236.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kldyh")
-script = ExtResource("2_soim6")
+script = ExtResource("2_ox2yw")
 
 [node name="Sidebar" type="Panel" parent="Window" unique_id=255795137]
 layout_mode = 0
@@ -74,12 +77,12 @@ offset_top = 19.0
 offset_right = 153.0
 offset_bottom = 56.0
 theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
+theme_override_styles/normal = ExtResource("3_8e0aw")
 text = "
 "
 alignment = 0
 expand_icon = true
-script = ExtResource("4_ases5")
+script = ExtResource("4_lfjtp")
 
 [node name="folder2" type="Button" parent="Window/Sidebar" unique_id=1542251996]
 layout_mode = 0
@@ -88,11 +91,11 @@ offset_top = 64.0
 offset_right = 145.0
 offset_bottom = 107.0
 theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
+theme_override_styles/normal = ExtResource("3_8e0aw")
 flat = true
 alignment = 0
 expand_icon = true
-script = ExtResource("6_ixur3")
+script = ExtResource("5_iomaa")
 
 [node name="folder3" type="Button" parent="Window/Sidebar" unique_id=1500321928]
 layout_mode = 0
@@ -106,20 +109,32 @@ text = "
 "
 alignment = 0
 expand_icon = true
-script = ExtResource("6_wvllp")
+script = ExtResource("6_y36nv")
 
 [node name="Sidebar2" type="Sprite2D" parent="Window/Sidebar" unique_id=2045161524]
+visible = false
 position = Vector2(77, 274)
 scale = Vector2(0.77, 1.0317756)
-texture = ExtResource("3_soim6")
+texture = ExtResource("7_w8fn5")
 
 [node name="Sidebar3" type="Sprite2D" parent="Window/Sidebar" unique_id=879953125]
 visible = false
 position = Vector2(78.155, 274)
 scale = Vector2(0.7587864, 1.0317756)
-texture = ExtResource("7_ixur3")
+texture = ExtResource("8_2xcxe")
 
-[node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("5_meu27")]
+[node name="Sidebar4" type="Sprite2D" parent="Window/Sidebar" unique_id=306190375]
+visible = false
+position = Vector2(78.155, 274)
+scale = Vector2(0.7587864, 1.0317756)
+texture = ExtResource("8_2xcxe")
+
+[node name="Sidebar5" type="Sprite2D" parent="Window/Sidebar" unique_id=310151985]
+position = Vector2(76.82712, 274)
+scale = Vector2(0.7721319, 1.0317756)
+texture = ExtResource("9_yuf8g")
+
+[node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("10_0waaj")]
 layout_mode = 1
 offset_top = -30.0
 offset_bottom = 0.0
@@ -132,43 +147,54 @@ offset_top = 100.0
 offset_right = 551.0
 offset_bottom = 337.0
 
-[node name="arquivo_a_selecionar" type="Button" parent="Window/MiddleBar" unique_id=497087839]
+[node name="jogo_de_dados" type="Button" parent="Window/MiddleBar" unique_id=497087839]
 layout_mode = 0
 offset_left = -11.0
 offset_top = -28.0
 offset_right = 143.0
 offset_bottom = 4.0
 theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
+theme_override_styles/normal = ExtResource("3_8e0aw")
 toggle_mode = true
 alignment = 0
 expand_icon = true
-script = ExtResource("6_6ngvn")
+script = ExtResource("11_c03e7")
 
 [node name="VisualizadorVazio" type="Sprite2D" parent="Window/MiddleBar" unique_id=192971554]
-position = Vector2(579, 175.5)
-scale = Vector2(0.9638482, 1.0299065)
-texture = ExtResource("8_meu27")
+position = Vector2(581.5, 174.99998)
+scale = Vector2(0.958128, 1.0280374)
+texture = ExtResource("12_ox2yw")
+
+[node name="VisualizadorVazio2" type="Sprite2D" parent="Window/MiddleBar" unique_id=1108685330]
+position = Vector2(581.9581, 174.99998)
+scale = Vector2(0.96040744, 1.0280374)
+texture = ExtResource("13_8e0aw")
 
 [node name="Arquivos1" type="Sprite2D" parent="Window/MiddleBar" unique_id=647961261]
+visible = false
 position = Vector2(181, 175.5)
 scale = Vector2(0.8321077, 1.0299066)
-texture = ExtResource("7_63l2p")
+texture = ExtResource("13_2q4xt")
 
 [node name="Arquivos2" type="Sprite2D" parent="Window/MiddleBar" unique_id=1398447358]
 visible = false
 position = Vector2(178.5, 175.99997)
 scale = Vector2(0.8495763, 1.3647641)
-texture = ExtResource("12_ixur3")
+texture = ExtResource("14_idakg")
+
+[node name="Arquivos3" type="Sprite2D" parent="Window/MiddleBar" unique_id=927622988]
+position = Vector2(184.00002, 175)
+scale = Vector2(0.8340081, 1.0280374)
+texture = ExtResource("16_lfjtp")
 
 [node name="Invalido" type="Sprite2D" parent="Window/MiddleBar" unique_id=1026670039]
 visible = false
 position = Vector2(579.25, 175)
 scale = Vector2(0.96666676, 1.3647642)
-texture = ExtResource("12_ases5")
+texture = ExtResource("16_0i4oa")
 
 [connection signal="pressed" from="Window/Sidebar/folder1" to="Window/Sidebar/folder1" method="_on_pressed"]
 [connection signal="pressed" from="Window/Sidebar/folder2" to="Window/Sidebar/folder2" method="_on_pressed"]
 [connection signal="pressed" from="Window/Sidebar/folder3" to="Window/Sidebar/folder3" method="_on_pressed"]
 [connection signal="gui_input" from="Window/TopBar" to="Window" method="_on_top_bar_gui_input"]
-[connection signal="toggled" from="Window/MiddleBar/arquivo_a_selecionar" to="Window/MiddleBar/arquivo_a_selecionar" method="_on_toggled"]
+[connection signal="toggled" from="Window/MiddleBar/jogo_de_dados" to="Window/MiddleBar/jogo_de_dados" method="_on_toggled"]

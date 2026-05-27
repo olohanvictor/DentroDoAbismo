@@ -1,24 +1,46 @@
 extends Control
 
-@onready var folders_na_sidebar = [
-	$Window/Sidebar/folder1,
-	$Window/Sidebar/folder2,
-	$Window/Sidebar/folder3,
-	$Window/Sidebar/folder4,
-	$Window/Sidebar/folder5,
-	$Window/Sidebar/folder6,
-	$Window/Sidebar/folder7
-]
+func _ready() -> void:
+	$Window/Documentos.hide()
+	$Window/Download.hide()
+	limpar_visualizador()
 
-@onready var folder_aberto = [
-	$Window/ChatLaura,
-	$Window/ChatRodrigo
-]
+# Essa função agora é sua melhor amiga: ela reseta o lado direito
+func limpar_visualizador():
+	$Window/ArquivosAbertos/Aviso.show()
+	$Window/ArquivosAbertos/Planilha.hide()
+	$Window/ArquivosAbertos/Comprovante.hide()
 
-func _ready():
-	$Window/Downloads.hide()
-	pass
+func _on_documentos_pressed() -> void:
+	$Window/Documentos.show()
+	$Window/Download.hide()
+	# NOVIDADE: Limpa o que estava aberto na direita ao trocar de aba
+	limpar_visualizador()
 
+func _on_downloads_pressed() -> void:
+	$Window/Download.show()
+	$Window/Documentos.hide()
+	# NOVIDADE: Limpa o que estava aberto na direita ao trocar de aba
+	limpar_visualizador()
 
-func _on_folder_2_pressed() -> void:
-	$Window/Downloads.show()# Replace with function body.
+func _on_imagens_pressed() -> void:
+	$Window/Documentos.hide()
+	$Window/Download.hide()
+	limpar_visualizador()
+
+func _on_videos_pressed() -> void:
+	$Window/Documentos.hide()
+	$Window/Download.hide()
+	limpar_visualizador()
+
+# --- FUNÇÕES DOS ARQUIVOS (IGUAIS ANTERIORMENTE) ---
+
+func _on_planilha_pressed() -> void:
+	$Window/ArquivosAbertos/Aviso.hide()
+	$Window/ArquivosAbertos/Planilha.show()
+	$Window/ArquivosAbertos/Comprovante.hide()
+
+func _on_comprovante_pressed() -> void:
+	$Window/ArquivosAbertos/Aviso.hide()
+	$Window/ArquivosAbertos/Comprovante.show()
+	$Window/ArquivosAbertos/Planilha.hide()

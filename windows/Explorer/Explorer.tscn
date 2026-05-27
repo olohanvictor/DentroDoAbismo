@@ -1,32 +1,29 @@
-[gd_scene format=3 uid="uid://hldttb1pmu8j"]
+[gd_scene format=3 uid="uid://ck7e2gy37bhpl"]
 
-[ext_resource type="Script" uid="uid://c8gc4exww7a4v" path="res://scripts/windows/Explorer/explorer.gd" id="1_8gf4t"]
+[ext_resource type="Script" uid="uid://c8gc4exww7a4v" path="res://scripts/windows/Explorer/explorer.gd" id="1_0tpm6"]
+[ext_resource type="FontFile" uid="uid://h7jedo71inf4" path="res://assets/fonts/HevelticaNeue/HelveticaNeueHeavy.otf" id="2_0tpm6"]
 [ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="2_soim6"]
-[ext_resource type="Texture2D" uid="uid://yg48w5jc12e" path="res://assets/appsicons/Explorer/folder.png" id="3_0tpm6"]
-[ext_resource type="StyleBox" uid="uid://b657fpqbigs1b" path="res://styles/imessage/buttons/chatrecente.tres" id="4_63l2p"]
+[ext_resource type="FontFile" uid="uid://ba7in05ewb8xh" path="res://assets/fonts/HevelticaNeue/HelveticaNeueMedium.otf" id="3_63l2p"]
+[ext_resource type="StyleBox" uid="uid://duhvlkc1mpfli" path="res://styles/explorer/buttons/abas.tres" id="4_meu27"]
+[ext_resource type="StyleBox" uid="uid://b4h7oxx6tpsjs" path="res://styles/explorer/buttons/abashover.tres" id="5_6ngvn"]
 [ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="5_meu27"]
+[ext_resource type="Texture2D" uid="uid://dye01wsrgiq3o" path="res://assets/icons/system/file.png" id="7_63l2p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kldyh"]
-bg_color = Color(0.87441623, 0.91330624, 1, 1)
+bg_color = Color(0.08235294, 0.05882353, 0.16862746, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ft1o"]
-bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+bg_color = Color(0.043137256, 0.03137255, 0.08627451, 1)
 corner_radius_top_right = 15
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsxq7"]
-content_margin_left = 8.0
-content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
-bg_color = Color(0.41960785, 0.41960785, 0.41960785, 0.76862746)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_soim6"]
+bg_color = Color(0.08235294, 0.05882353, 0.16862746, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dydum"]
-bg_color = Color(0.40631357, 0.57699525, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rwvg"]
+bg_color = Color(0.043137256, 0.03137255, 0.08627451, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qr0w"]
-bg_color = Color(0.8745098, 0.9137255, 1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wabkf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63l2p"]
+bg_color = Color(0.9822368, 0.98173565, 0.9973151, 1)
 
 [node name="ExplorerPanel" type="Control" unique_id=475149261]
 layout_mode = 3
@@ -39,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_8gf4t")
+script = ExtResource("1_0tpm6")
 
 [node name="Window" type="Panel" parent="." unique_id=1457848082]
 layout_mode = 1
@@ -57,194 +54,343 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kldyh")
 script = ExtResource("2_soim6")
 
+[node name="Label" type="Label" parent="Window" unique_id=725544832]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.5
+offset_top = -11.5
+offset_right = -7.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Não tem nada por aqui :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Aviso" type="Label" parent="Window" unique_id=1783602921]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.5
+offset_top = -11.5
+offset_right = -7.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Não tem nada por aqui :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Sidebar" type="Panel" parent="Window" unique_id=255795137]
 layout_mode = 0
-offset_right = 155.0
+offset_right = 143.0
 offset_bottom = 550.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_2ft1o")
 
-[node name="folder1" type="Button" parent="Window/Sidebar" unique_id=1500321928]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 62.0
-offset_right = 154.0
-offset_bottom = 94.0
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = SubResource("StyleBoxFlat_rsxq7")
-text = "Downloads
+[node name="Label" type="Label" parent="Window/Sidebar" unique_id=1498920133]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -243.5
+offset_right = 54.5
+offset_bottom = -226.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0tpm6")
+theme_override_font_sizes/font_size = 18
+text = "FileExplorer"
 
-"
-icon = ExtResource("3_0tpm6")
-alignment = 0
-expand_icon = true
+[node name="Documentos" type="Button" parent="Window/Sidebar" unique_id=1248302513]
+custom_minimum_size = Vector2(125, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -200.5
+offset_right = 50.0
+offset_bottom = -175.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_63l2p")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("4_meu27")
+theme_override_styles/hover = ExtResource("5_6ngvn")
+text = "Documentos"
 
-[node name="folder2" type="Button" parent="Window/Sidebar" unique_id=1542251996]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 24.0
-offset_right = 153.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
-text = "Desktop
-"
-icon = ExtResource("3_0tpm6")
-alignment = 0
-expand_icon = true
+[node name="Downloads" type="Button" parent="Window/Sidebar" unique_id=1909542053]
+custom_minimum_size = Vector2(125, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -165.5
+offset_right = 62.5
+offset_bottom = -130.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_63l2p")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("4_meu27")
+theme_override_styles/hover = ExtResource("5_6ngvn")
+text = "Downloads"
 
-[node name="folder3" type="Button" parent="Window/Sidebar" unique_id=82865971]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 173.0
-offset_right = 152.0
-offset_bottom = 205.0
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
-text = "Documentos
-"
-icon = ExtResource("3_0tpm6")
-alignment = 0
-expand_icon = true
-
-[node name="folder4" type="Button" parent="Window/Sidebar" unique_id=1124707873]
-layout_mode = 0
-offset_top = 137.0
-offset_right = 153.0
-offset_bottom = 169.0
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
+[node name="Imagens" type="Button" parent="Window/Sidebar" unique_id=1031507053]
+custom_minimum_size = Vector2(125, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -122.5
+offset_right = 62.5
+offset_bottom = -87.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_63l2p")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("4_meu27")
+theme_override_styles/hover = ExtResource("5_6ngvn")
 text = "Imagens"
-icon = ExtResource("3_0tpm6")
-alignment = 0
+
+[node name="Videos" type="Button" parent="Window/Sidebar" unique_id=1315219888]
+custom_minimum_size = Vector2(125, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -79.5
+offset_right = 62.5
+offset_bottom = -44.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_63l2p")
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = ExtResource("4_meu27")
+theme_override_styles/hover = ExtResource("5_6ngvn")
+text = "Videos"
+
+[node name="Documentos" type="Panel" parent="Window" unique_id=477891049]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -265.0
+offset_right = 115.0
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_soim6")
+
+[node name="Planilha" type="Button" parent="Window/Documentos" unique_id=716327400]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 100.0
+offset_right = 79.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 6
+text = "Custos_de_
+Maio.xlsx
+"
+icon = ExtResource("7_63l2p")
+icon_alignment = 1
+vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="folder5" type="Button" parent="Window/Sidebar" unique_id=530030127]
+[node name="Download" type="Panel" parent="Window" unique_id=101772034]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -265.0
+offset_right = 115.0
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_soim6")
+
+[node name="Comprovante" type="Button" parent="Window/Download" unique_id=798944104]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 101.0
-offset_right = 154.0
-offset_bottom = 133.0
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
-text = "Vídeos"
-icon = ExtResource("3_0tpm6")
-alignment = 0
+offset_left = 19.0
+offset_top = 100.0
+offset_right = 79.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 6
+text = "Comprovante.pdf"
+icon = ExtResource("7_63l2p")
+icon_alignment = 1
+vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="folder6" type="Button" parent="Window/Sidebar" unique_id=497087839]
+[node name="ArquivosAbertos" type="Panel" parent="Window" unique_id=395337539]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 457.0
-offset_right = 156.0
-offset_bottom = 489.0
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
-text = "Este Computador"
-icon = ExtResource("3_0tpm6")
-alignment = 0
-expand_icon = true
+offset_left = 600.0
+offset_right = 950.0
+offset_bottom = 550.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1rwvg")
 
-[node name="folder7" type="Button" parent="Window/Sidebar" unique_id=999831533]
+[node name="Aviso" type="Label" parent="Window/ArquivosAbertos" unique_id=314502548]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = -24.5
+offset_right = 85.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Selecione um arquivo 
+para visualizar."
+horizontal_alignment = 1
+
+[node name="Planilha" type="Panel" parent="Window/ArquivosAbertos" unique_id=1249510488]
+visible = false
 layout_mode = 0
-offset_left = -1.0
-offset_top = 494.0
-offset_right = 154.0
-offset_bottom = 526.0
-theme_override_font_sizes/font_size = 15
-theme_override_styles/normal = ExtResource("4_63l2p")
-text = " Lixeira"
-icon = ExtResource("3_0tpm6")
-alignment = 0
-expand_icon = true
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 345.0
+offset_bottom = 545.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_63l2p")
+
+[node name="Label" type="Label" parent="Window/ArquivosAbertos/Planilha" unique_id=1210306230]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -168.5
+offset_right = 89.0
+offset_bottom = 168.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 14
+text = "=============================
+RELATÓRIO FINANCEIRO - MAIO
+=============================
+
+Setor                                   Valor
+----------------------------------------------------
+Marketing                      R$ 82.400
+Infraestrutura               R$ 58.900
+Equipamentos               R$ 35.200
+Consultoria Externa     R$ 750.000
+Recursos Humanos      R$ 46.700
+Publicidade                    R$ 91.300
+----------------------------------------------------
+
+TOTAL                  R$ 1.064.500
+=============================
+
+Observação:
+Pagamento de consultoria aprovado 
+manualmente  por F. Amaral."
+
+[node name="Comprovante" type="Panel" parent="Window/ArquivosAbertos" unique_id=1521718989]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 345.0
+offset_bottom = 545.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_63l2p")
+
+[node name="Label" type="Label" parent="Window/ArquivosAbertos/Comprovante" unique_id=1647499449]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.5
+offset_top = -202.5
+offset_right = 114.5
+offset_bottom = 202.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "========================================
+COMPROVANTE DE TRANSFERÊNCIA
+========================================
+
+Banco Horizon
+
+Origem:
+Belle Époque LTDA.
+
+Destino:
+Nova Horizon Consulting LTDA.
+
+Valor:
+R$ 750.000,00
+
+Data:
+14/05 - 22:41
+
+Status:
+TRANSFERÊNCIA CONCLUÍDA
+
+Protocolo:
+#884291HX
+========================================"
 
 [node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("5_meu27")]
 layout_mode = 1
-offset_top = -30.0
-offset_bottom = 0.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_dydum")
+anchors_preset = 8
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -305.0
+offset_bottom = -275.0
+grow_vertical = 2
 
-[node name="Downloads" type="Panel" parent="Window" unique_id=458402216]
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1546598640]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 7.0
-offset_right = 946.0
-offset_bottom = 542.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_1qr0w")
+offset_left = -320.0
+offset_top = -221.0
+offset_right = 115.0
+offset_bottom = -190.0
+theme_override_font_sizes/font_size = 8
+placeholder_text = "Pesquise um arquivo"
 
-[node name="Button3" type="Button" parent="Window/Downloads" unique_id=97071769]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.48400003
-anchor_top = 0.5
-anchor_right = 0.48400003
-anchor_bottom = 0.5
-offset_left = -14.424011
-offset_top = -244.5
-offset_right = 75.57599
-offset_bottom = -163.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
-
-[node name="Button2" type="Button" parent="Window/Downloads" unique_id=1215502057]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.48400003
-anchor_top = 0.5
-anchor_right = 0.48400003
-anchor_bottom = 0.5
-offset_left = -244.42401
-offset_top = -246.5
-offset_right = -154.42401
-offset_bottom = -165.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
-
-[node name="Button" type="Button" parent="Window/Downloads" unique_id=375543689]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.48400003
-anchor_top = 0.5
-anchor_right = 0.48400003
-anchor_bottom = 0.5
-offset_left = -354.424
-offset_top = -244.5
-offset_right = -264.424
-offset_bottom = -163.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
-
-[node name="Button5" type="Button" parent="Window/Downloads" unique_id=906367624]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.48400003
-anchor_top = 0.5
-anchor_right = 0.48400003
-anchor_bottom = 0.5
-offset_left = -132.42401
-offset_top = -246.5
-offset_right = -42.42401
-offset_bottom = -165.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
-
-[node name="Button4" type="Button" parent="Window/Downloads" unique_id=55644291]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.48400003
-anchor_top = 0.5
-anchor_right = 0.48400003
-anchor_bottom = 0.5
-offset_left = -356.424
-offset_top = -138.5
-offset_right = -266.424
-offset_bottom = -57.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_wabkf")
-
-[connection signal="pressed" from="Window/Sidebar/folder2" to="." method="_on_folder_2_pressed"]
+[connection signal="pressed" from="Window/Sidebar/Documentos" to="." method="_on_documentos_pressed"]
+[connection signal="pressed" from="Window/Sidebar/Downloads" to="." method="_on_downloads_pressed"]
+[connection signal="pressed" from="Window/Sidebar/Imagens" to="." method="_on_imagens_pressed"]
+[connection signal="pressed" from="Window/Sidebar/Videos" to="." method="_on_videos_pressed"]
+[connection signal="pressed" from="Window/Documentos/Planilha" to="." method="_on_planilha_pressed"]
+[connection signal="pressed" from="Window/Download/Comprovante" to="." method="_on_comprovante_pressed"]
 [connection signal="gui_input" from="Window/TopBar" to="Window" method="_on_top_bar_gui_input"]

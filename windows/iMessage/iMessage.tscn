@@ -3,38 +3,65 @@
 [ext_resource type="StyleBox" uid="uid://b657fpqbigs1b" path="res://styles/imessage/buttons/chatrecente.tres" id="1_5wbg7"]
 [ext_resource type="Script" uid="uid://do2wbq8swy7xk" path="res://scripts/windows/iMessage/imessage.gd" id="1_pq6ll"]
 [ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="2_mjm2s"]
-[ext_resource type="Texture2D" uid="uid://f7pfyg1djgu3" path="res://assets/circulo.png" id="2_qsq2e"]
 [ext_resource type="StyleBox" uid="uid://xxu56f0xcybs" path="res://styles/imessage/buttons/nomecontatochat.tres" id="3_qsq2e"]
+[ext_resource type="Texture2D" uid="uid://y3tyjcga68v" path="res://assets/icons/system/user.png" id="4_mr56i"]
 [ext_resource type="StyleBox" uid="uid://cllbres8xyy48" path="res://styles/imessage/chatmessages/contmsg.tres" id="4_pqgkq"]
 [ext_resource type="StyleBox" uid="uid://cqgurolj5uhup" path="res://styles/imessage/chatmessages/usermsg.tres" id="5_pq6ll"]
+[ext_resource type="Texture2D" uid="uid://blgqdnp5akpo6" path="res://assets/icons/system/userpink.png" id="5_qcfks"]
 [ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="8_tyaus"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14atv"]
-bg_color = Color(0.8446132, 0.84461373, 0.84461343, 1)
+bg_color = Color(0.98039216, 0.9764706, 0.9647059, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qsq2e"]
-bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+bg_color = Color(0.007843138, 0.003921569, 0.015686275, 0.64705884)
 corner_radius_top_right = 15
+corner_radius_bottom_right = 15
 
 [sub_resource type="SystemFont" id="SystemFont_ihasx"]
 subpixel_positioning = 0
 
-[sub_resource type="SystemFont" id="SystemFont_8kja4"]
+[sub_resource type="SystemFont" id="SystemFont_563mw"]
 subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_mr56i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_563mw"]
+bg_color = Color(0.7019608, 0.7254902, 0.7137255, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.16470589, 0.16470589, 0.21960784, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0.09411765, 0.09411765, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mr56i"]
+bg_color = Color(0.21568628, 0.21568628, 0.2901961, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuidj"]
 content_margin_left = 8.0
 content_margin_top = 5.0
 content_margin_right = 5.0
 content_margin_bottom = 5.0
-bg_color = Color(0.41960785, 0.41960785, 0.41960785, 0.76862746)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+bg_color = Color(0.7019608, 0.7254902, 0.7137255, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcfks"]
+bg_color = Color(0.21568628, 0.21568628, 0.2901961, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3poo"]
-bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+bg_color = Color(0.70402145, 0.72687703, 0.71423554, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -45,6 +72,7 @@ content_margin_left = 5.0
 content_margin_top = 3.0
 content_margin_right = 5.0
 content_margin_bottom = 3.0
+bg_color = Color(0.81829125, 0.83445865, 0.8263413, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -91,7 +119,7 @@ offset_left = 82.0
 offset_top = 41.0
 offset_right = 218.0
 offset_bottom = 83.0
-theme_override_colors/font_color = Color(0, 0.2901961, 0.8117647, 1)
+theme_override_colors/font_color = Color(5.7756904e-07, 0.7284353, 0.6538898, 1)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 30
 text = "iMessage"
@@ -102,9 +130,9 @@ offset_left = 70.0
 offset_top = 151.0
 offset_right = 154.0
 offset_bottom = 164.0
-theme_override_colors/font_color = Color(0.63412154, 0.65070903, 0.67384005, 1)
-theme_override_fonts/font = SubResource("SystemFont_ihasx")
-theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(1.4151617, 1.4439856, 1.4958686, 0.9490196)
+theme_override_fonts/font = SubResource("SystemFont_563mw")
+theme_override_font_sizes/font_size = 12
 text = "conversas recentes"
 
 [node name="Search" type="LineEdit" parent="Window" unique_id=1543587479]
@@ -113,20 +141,25 @@ offset_left = 63.0
 offset_top = 102.0
 offset_right = 309.0
 offset_bottom = 133.0
-theme_override_fonts/font = SubResource("SystemFont_8kja4")
-theme_override_font_sizes/font_size = 10
-placeholder_text = "com quem você quer falar hoje?"
+theme_override_colors/font_color = Color(0.4862745, 0.4862745, 0.5686275, 1)
+theme_override_colors/font_placeholder_color = Color(0.4862745, 0.4862745, 0.5686275, 1)
+theme_override_fonts/font = SubResource("FontVariation_mr56i")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_563mw")
+placeholder_text = "Com quem você quer falar hoje?"
+alignment = 1
 
 [node name="contact1" type="Button" parent="Window" unique_id=1041867794]
 layout_mode = 0
 offset_left = 60.0
 offset_top = 170.0
 offset_right = 310.0
-offset_bottom = 210.0
+offset_bottom = 215.0
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = ExtResource("1_5wbg7")
-text = " Rodrigo"
-icon = ExtResource("2_qsq2e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mr56i")
+text = "Paulo Rogerio"
+icon = ExtResource("4_mr56i")
 alignment = 0
 expand_icon = true
 
@@ -135,17 +168,17 @@ layout_mode = 0
 offset_left = 60.0
 offset_top = 220.0
 offset_right = 310.0
-offset_bottom = 260.0
+offset_bottom = 265.0
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxFlat_iuidj")
-text = "Laura
+theme_override_styles/hover = SubResource("StyleBoxFlat_qcfks")
+text = "Natalia
 "
-icon = ExtResource("2_qsq2e")
+icon = ExtResource("5_qcfks")
 alignment = 0
 expand_icon = true
 
-[node name="ChatRodrigo" type="Panel" parent="Window" unique_id=1031760954]
-visible = false
+[node name="ChatPauloRoger" type="Panel" parent="Window" unique_id=1031760954]
 layout_mode = 1
 offset_left = 320.0
 offset_top = 10.0
@@ -153,7 +186,7 @@ offset_right = 940.0
 offset_bottom = 540.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d3poo")
 
-[node name="NomeContatoChat" type="Button" parent="Window/ChatRodrigo" unique_id=741982340]
+[node name="NomeContatoChat" type="Button" parent="Window/ChatPauloRoger" unique_id=741982340]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
@@ -163,12 +196,13 @@ theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = ExtResource("3_qsq2e")
 theme_override_styles/pressed = ExtResource("3_qsq2e")
 theme_override_styles/hover = ExtResource("3_qsq2e")
-text = " Rodrigo"
-icon = ExtResource("2_qsq2e")
+text = "Paulo Rogerio
+"
+icon = ExtResource("4_mr56i")
 alignment = 0
 expand_icon = true
 
-[node name="DataDialogo" type="Label" parent="Window/ChatRodrigo" unique_id=296612969]
+[node name="DataDialogo" type="Label" parent="Window/ChatPauloRoger" unique_id=296612969]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -181,58 +215,60 @@ offset_right = 32.0
 offset_bottom = -170.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(4.165, 4.165, 3.2238235, 0.9411765)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_pq6ll")
-text = "16 de Maio"
+text = "25 de Maio"
 
-[node name="Mensagem1" type="Label" parent="Window/ChatRodrigo" unique_id=1022824565]
+[node name="Mensagem1" type="Label" parent="Window/ChatPauloRoger" unique_id=1781732759]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 115.0
-offset_right = 144.0
-offset_bottom = 148.0
+offset_top = 118.0
+offset_right = 435.0
+offset_bottom = 191.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = ExtResource("4_pqgkq")
-text = "E aí, pingou o pix?"
+text = "Pingou aqui.
+Você fez um ótimo trabalho. Espero que não seja a última vez.
+Trate de ter certeza de que você jogou a poeira pra baixo do tapete. "
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Mensagem2" type="Label" parent="Window/ChatRodrigo" unique_id=1866127396]
+[node name="Mensagem2" type="Label" parent="Window/ChatPauloRoger" unique_id=1664653914]
 layout_mode = 0
-offset_left = 324.0
-offset_top = 170.0
+offset_left = 233.0
+offset_top = 207.0
 offset_right = 600.0
-offset_bottom = 223.0
+offset_bottom = 260.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = ExtResource("5_pq6ll")
-text = "Não me mande mais mensagens por aqui. 
-Você já sabe por onde se comunicar comigo."
+text = "Fica dificil se você ficar se comunicar comigo por um app comum de mensagens.  apagar o histórico de mensagens."
 horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Mensagem3" type="Label" parent="Window/ChatRodrigo" unique_id=1628913721]
+[node name="Mensagem3" type="Label" parent="Window/ChatPauloRoger" unique_id=1976955093]
 layout_mode = 0
-offset_left = 329.0
-offset_top = 233.0
+offset_left = 234.0
+offset_top = 270.0
 offset_right = 600.0
-offset_bottom = 266.0
+offset_bottom = 303.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 2
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = ExtResource("5_pq6ll")
-text = "Lembre-se de apagar as mensagens. Todas."
+text = "Não fale nada sobre isso por aqui. Tenha certeza que você vai apagar o histórico de mensagens."
 horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="ChatLaura" type="Panel" parent="Window" unique_id=779437882]
+[node name="ChatNatalia" type="Panel" parent="Window" unique_id=779437882]
 visible = false
 layout_mode = 1
 offset_left = 320.0
@@ -241,7 +277,7 @@ offset_right = 940.0
 offset_bottom = 540.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_d3poo")
 
-[node name="NomeContatoChat" type="Button" parent="Window/ChatLaura" unique_id=303766322]
+[node name="NomeContatoChat" type="Button" parent="Window/ChatNatalia" unique_id=303766322]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
@@ -251,29 +287,118 @@ theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = ExtResource("3_qsq2e")
 theme_override_styles/pressed = ExtResource("3_qsq2e")
 theme_override_styles/hover = ExtResource("3_qsq2e")
-text = " Laura"
-icon = ExtResource("2_qsq2e")
+text = "Natalia"
+icon = ExtResource("5_qcfks")
 alignment = 0
 expand_icon = true
 
-[node name="Aviso" type="Label" parent="Window/ChatLaura" unique_id=1379768607]
+[node name="DataDialogo" type="Label" parent="Window/ChatNatalia" unique_id=1516461269]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -115.0
-offset_top = 75.0
-offset_right = 117.0
-offset_bottom = 112.0
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -190.0
+offset_right = 32.0
+offset_bottom = -170.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+grow_vertical = 2
+theme_override_colors/font_color = Color(4.165, 4.165, 3.2238235, 0.9411765)
 theme_override_fonts/font = SubResource("SystemFont_ihasx")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_pq6ll")
-text = "Parece que não tem nada por aqui :(
-Que tal enviar uma mensagem para começar?"
-horizontal_alignment = 1
+text = "25 de Maio"
+
+[node name="Mensagem1" type="Label" parent="Window/ChatNatalia" unique_id=536687688]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 118.0
+offset_right = 243.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("4_pqgkq")
+text = "Você sumiu hoje, senti sua falta 😭"
 vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mensagem4" type="Label" parent="Window/ChatNatalia" unique_id=844994086]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 223.0
+offset_right = 340.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("4_pqgkq")
+text = "Achei estranho, você sempre manda alguma coisa..."
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mensagem6" type="Label" parent="Window/ChatNatalia" unique_id=1503059401]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 372.0
+offset_right = 203.0
+offset_bottom = 405.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("4_pqgkq")
+text = "Não se acostuma não kkkkk"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mensagem2" type="Label" parent="Window/ChatNatalia" unique_id=1994443479]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 171.0
+offset_right = 600.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("5_pq6ll")
+text = "Ah, desculpa, tô cheio de trabalho"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mensagem3" type="Label" parent="Window/ChatNatalia" unique_id=299045274]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 276.0
+offset_right = 600.0
+offset_bottom = 309.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("5_pq6ll")
+text = "As coisas estão corridas pra mim recentemente, só isso."
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Mensagem5" type="Label" parent="Window/ChatNatalia" unique_id=455836423]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 319.0
+offset_right = 600.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 2
+theme_override_fonts/font = SubResource("SystemFont_ihasx")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = ExtResource("5_pq6ll")
+text = "Mas bom saber que sente minha falta ❤"
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("8_tyaus")]
 layout_mode = 1

@@ -18,7 +18,3 @@ func _on_topbar_gui_input(event: InputEvent) -> void:
 
 	if event is InputEventMouseMotion and dragging:
 		global_position = get_global_mouse_position() + drag_offset
-
-
-func _on_top_bar_gui_input(event: InputEvent) -> void:
-	pass # Replace with function body.

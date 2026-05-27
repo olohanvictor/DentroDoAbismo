@@ -10,14 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://d2q32ojcxx6ly" path="res://assets/icons/apps/iMessage.png" id="4_nnwum"]
 [ext_resource type="Texture2D" uid="uid://dbsk4ghipklae" path="res://assets/icons/system/usersys.png" id="5_j7byd"]
 [ext_resource type="Texture2D" uid="uid://c3cfv01f85dpn" path="res://assets/icons/system/search.png" id="5_nnwum"]
-[ext_resource type="PackedScene" uid="uid://b4mdiphq2iygt" path="res://windows/Wifi/Wifi.tscn" id="6_mw0pb"]
 [ext_resource type="Texture2D" uid="uid://2k7uedjq6ea2" path="res://assets/icons/apps/email.png" id="8_dk1sk"]
 [ext_resource type="Texture2D" uid="uid://c8odjrpb5c4em" path="res://assets/icons/apps/explorer.png" id="9_gei7d"]
 [ext_resource type="PackedScene" uid="uid://fivmf77wneoq" path="res://windows/iMessage/iMessage.tscn" id="9_nnwum"]
 [ext_resource type="Texture2D" uid="uid://d28h2m8qbafym" path="res://assets/icons/apps/browser.png" id="10_2ef6j"]
-[ext_resource type="PackedScene" uid="uid://bwesns0hb6pld" path="res://windows/eMail/eMail.tscn" id="11_ulj47"]
-[ext_resource type="PackedScene" uid="uid://hldttb1pmu8j" path="res://windows/Explorer/Explorer.tscn" id="13_jcvbf"]
+[ext_resource type="PackedScene" uid="uid://bht0k1hrssa4v" path="res://windows/eMail/eMail.tscn" id="11_ulj47"]
 [ext_resource type="Texture2D" uid="uid://dqnxi2kqd8wbu" path="res://assets/icons/apps/spotlite.png" id="14_xyygd"]
+[ext_resource type="PackedScene" uid="uid://bfkid0w876fa0" path="res://windows/Spotilite/Spotilite.tscn" id="19_o1duq"]
+[ext_resource type="PackedScene" uid="uid://chqqv5th87f0x" path="res://windows/Browser/Browser.tscn" id="20_f3r5j"]
+[ext_resource type="PackedScene" uid="uid://ck7e2gy37bhpl" path="res://windows/Explorer/Explorer.tscn" id="20_ruh31"]
+[ext_resource type="PackedScene" uid="uid://vuvjvyfo3nxv" path="res://components/falas.tscn" id="20_tces4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcvbf"]
 bg_color = Color(0.79607844, 0.79607844, 0.79607844, 0.6039216)
@@ -61,6 +63,94 @@ content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
+
+[sub_resource type="Animation" id="Animation_ruh31"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falas:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f3r5j"]
+resource_name = "fala"
+length = 5.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falas")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 4.9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [4],
+"method": &"mostrar_fala"
+}, {
+"args": [],
+"method": &"esconder_fala"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Falas:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4, 4.92),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tces4"]
+resource_name = "vazio"
+length = 5.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Falas")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 4.9),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [5],
+"method": &"mostrar_fala"
+}, {
+"args": [],
+"method": &"esconder_fala"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Falas:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4, 4.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ruh31"]
+_data = {
+&"RESET": SubResource("Animation_ruh31"),
+&"fala": SubResource("Animation_f3r5j"),
+&"vazio": SubResource("Animation_tces4")
+}
 
 [node name="Desktop" type="Control" unique_id=2114106872]
 layout_mode = 3
@@ -281,7 +371,7 @@ autowrap_trim_flags = 0
 icon_alignment = 1
 expand_icon = true
 
-[node name="Music" type="Button" parent="Dock" unique_id=41655632]
+[node name="Spotlite" type="Button" parent="Dock" unique_id=41655632]
 layout_mode = 0
 offset_left = 258.0
 offset_top = 5.0
@@ -295,14 +385,6 @@ autowrap_trim_flags = 0
 icon_alignment = 1
 expand_icon = true
 
-[node name="WifiPanel" parent="." unique_id=334306751 instance=ExtResource("6_mw0pb")]
-visible = false
-layout_mode = 1
-offset_left = 189.0
-offset_top = -330.0
-offset_right = 389.0
-offset_bottom = -80.0
-
 [node name="iMessagePanel" parent="." unique_id=880441717 instance=ExtResource("9_nnwum")]
 visible = false
 layout_mode = 1
@@ -311,6 +393,24 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
-[node name="ExplorerPanel" parent="." unique_id=475149261 instance=ExtResource("13_jcvbf")]
+[node name="SpotlitePanel" parent="." unique_id=20562443 instance=ExtResource("19_o1duq")]
 visible = false
 layout_mode = 1
+
+[node name="BrowserPanel" parent="." unique_id=108890109 instance=ExtResource("20_f3r5j")]
+visible = false
+layout_mode = 1
+
+[node name="ExplorerPanel" parent="." unique_id=475149261 instance=ExtResource("20_ruh31")]
+visible = false
+layout_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1070801527]
+
+[node name="Falas" parent="CanvasLayer" unique_id=1033649247 instance=ExtResource("20_tces4")]
+visible = false
+offset_top = 240.0
+offset_bottom = 265.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=1750469296]
+libraries/ = SubResource("AnimationLibrary_ruh31")

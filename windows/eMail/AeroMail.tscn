@@ -1,0 +1,512 @@
+[gd_scene format=3 uid="uid://xgbx0n3mll6t"]
+
+[ext_resource type="Script" uid="uid://b2dbp1oujqimo" path="res://scripts/windows/AeroMail/Aeromail.gd" id="1_mfl27"]
+
+[sub_resource type="StyleBoxFlat" id="sb_window"]
+bg_color = Color(0.059, 0.051, 0.078, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.165, 0.122, 0.251, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="sb_sidebar"]
+bg_color = Color(0.075, 0.055, 0.118, 1)
+border_width_right = 1
+border_color = Color(0.165, 0.122, 0.251, 1)
+
+[sub_resource type="StyleBoxFlat" id="sb_logo"]
+bg_color = Color(0.486, 0.31, 1, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="sb_compose"]
+bg_color = Color(0.486, 0.31, 1, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="sb_compose_hover"]
+bg_color = Color(0.424, 0.243, 0.937, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="sb_nav_active"]
+bg_color = Color(0.118, 0.082, 0.188, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="sb_nav_normal"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="sb_user_av"]
+bg_color = Color(0.486, 0.31, 1, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.486, 0.31, 1, 0.2)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="sb_topbar"]
+bg_color = Color(0.059, 0.051, 0.078, 1)
+border_width_bottom = 1
+border_color = Color(0.165, 0.122, 0.251, 1)
+
+[sub_resource type="StyleBoxFlat" id="sb_email_active"]
+bg_color = Color(0.102, 0.063, 0.157, 1)
+border_width_left = 2
+border_color = Color(0.663, 0.333, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="sb_av1"]
+bg_color = Color(0.486, 0.31, 1, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.486, 0.31, 1, 0.2)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="sb_divider"]
+bg_color = Color(0.118, 0.082, 0.188, 1)
+
+[sub_resource type="StyleBoxFlat" id="sb_email_unread"]
+bg_color = Color(0.059, 0.051, 0.078, 1)
+border_width_left = 2
+border_color = Color(0.486, 0.31, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="sb_av2"]
+bg_color = Color(0.659, 0.333, 0.969, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.659, 0.333, 0.969, 0.2)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="sb_email_normal"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 2
+border_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="sb_av3"]
+bg_color = Color(0.427, 0.157, 0.851, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.427, 0.157, 0.851, 0.2)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="AeroMail" type="Control" unique_id=518621079]
+custom_minimum_size = Vector2(950, 550)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 950.0
+offset_bottom = 550.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mfl27")
+
+[node name="Window" type="PanelContainer" parent="." unique_id=965122540]
+layout_mode = 0
+offset_right = 950.0
+offset_bottom = 550.0
+theme_override_styles/panel = SubResource("sb_window")
+
+[node name="HBox" type="HBoxContainer" parent="Window" unique_id=1086850477]
+layout_mode = 2
+
+[node name="Sidebar" type="PanelContainer" parent="Window/HBox" unique_id=1848530044]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_sidebar")
+
+[node name="SidebarVBox" type="VBoxContainer" parent="Window/HBox/Sidebar" unique_id=384786270]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LogoMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=1055529207]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="LogoHBox" type="HBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin" unique_id=1465289891]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LogoIcon" type="PanelContainer" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin/LogoHBox" unique_id=986989675]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_logo")
+
+[node name="LogoIconLbl" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin/LogoHBox/LogoIcon" unique_id=718914959]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "@"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LogoLbl" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin/LogoHBox" unique_id=1272298087]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "AeroMail"
+
+[node name="ComposeMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=788115589]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="ComposeBtn" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/ComposeMargin" unique_id=203195953]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("sb_compose")
+theme_override_styles/pressed = SubResource("sb_compose_hover")
+theme_override_styles/hover = SubResource("sb_compose_hover")
+text = "+ Escrever"
+
+[node name="NavMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=1772536664]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="NavVBox" type="VBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin" unique_id=1457348057]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="NavInbox" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=1160415783]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("sb_nav_active")
+theme_override_styles/hover = SubResource("sb_nav_active")
+text = "  Caixa de Entrada"
+alignment = 0
+
+[node name="NavSent" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=719058197]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.478, 0.408, 0.627, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("sb_nav_normal")
+theme_override_styles/hover = SubResource("sb_nav_active")
+text = "  Enviados"
+alignment = 0
+
+[node name="NavDrafts" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=1936572872]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.478, 0.408, 0.627, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("sb_nav_normal")
+theme_override_styles/hover = SubResource("sb_nav_active")
+text = "  Rascunhos"
+alignment = 0
+
+[node name="NavTrash" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=1806004636]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.478, 0.408, 0.627, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("sb_nav_normal")
+theme_override_styles/hover = SubResource("sb_nav_active")
+text = "  Lixeira"
+alignment = 0
+
+[node name="SidebarSpacer" type="Control" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=426410334]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="UserMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=1265715710]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="UserHBox" type="HBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin" unique_id=1140533877]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="UserAv" type="PanelContainer" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox" unique_id=1088411643]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_user_av")
+
+[node name="UserAvLbl" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox/UserAv" unique_id=1109918326]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "Fa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UserInfo" type="VBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox" unique_id=752482363]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="UserName" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox/UserInfo" unique_id=1414155209]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "Fabio."
+
+[node name="UserEmail" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox/UserInfo" unique_id=979027231]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.353, 0.22, 0.502, 1)
+theme_override_font_sizes/font_size = 10
+text = "Fabio@aeromail.app"
+
+[node name="MainArea" type="VBoxContainer" parent="Window/HBox" unique_id=361798916]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="TopBar" type="PanelContainer" parent="Window/HBox/MainArea" unique_id=996637594]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_topbar")
+
+[node name="TopBarMargin" type="MarginContainer" parent="Window/HBox/MainArea/TopBar" unique_id=1315169108]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 0
+
+[node name="TopBarLbl" type="Label" parent="Window/HBox/MainArea/TopBar/TopBarMargin" unique_id=1337251593]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Caixa de Entrada"
+
+[node name="EmailList" type="VBoxContainer" parent="Window/HBox/MainArea" unique_id=127722974]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Email1" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=449579853]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_email_active")
+
+[node name="E1Margin" type="MarginContainer" parent="Window/HBox/MainArea/EmailList/Email1" unique_id=1847473526]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="E1HBox" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin" unique_id=987515303]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Av1" type="PanelContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox" unique_id=509358160]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("sb_av1")
+
+[node name="Av1Lbl" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/Av1" unique_id=1209958745]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.663, 0.467, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "RN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E1Content" type="VBoxContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox" unique_id=1536200100]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="E1Header" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content" unique_id=1414077531]
+layout_mode = 2
+
+[node name="E1From" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content/E1Header" unique_id=1493750099]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.878, 0.816, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Rafael Nunes"
+
+[node name="E1Time" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content/E1Header" unique_id=1252068567]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.22, 0.376, 1)
+theme_override_font_sizes/font_size = 11
+text = "10:42"
+
+[node name="E1Subject" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content" unique_id=1430718671]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Project Aero — revisão final"
+
+[node name="Div1" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=1182512990]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_divider")
+
+[node name="Email2" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=39124520]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_email_unread")
+
+[node name="E2Margin" type="MarginContainer" parent="Window/HBox/MainArea/EmailList/Email2" unique_id=226513666]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="E2HBox" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin" unique_id=1992218208]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Av2" type="PanelContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox" unique_id=1280010868]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("sb_av2")
+
+[node name="Av2Lbl" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/Av2" unique_id=1066899750]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.769, 0.565, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "LC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E2Content" type="VBoxContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox" unique_id=435842205]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="E2Header" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content" unique_id=494569968]
+layout_mode = 2
+
+[node name="E2From" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content/E2Header" unique_id=1493563347]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.878, 0.816, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Luna Costa"
+
+[node name="E2Time" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content/E2Header" unique_id=365774324]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.22, 0.376, 1)
+theme_override_font_sizes/font_size = 11
+text = "09:18"
+
+[node name="E2Subject" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content" unique_id=557813943]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Design tokens update"
+
+[node name="Div2" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=1804033192]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_divider")
+
+[node name="Email3" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=1287654449]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_styles/panel = SubResource("sb_email_normal")
+
+[node name="E3Margin" type="MarginContainer" parent="Window/HBox/MainArea/EmailList/Email3" unique_id=324747384]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="E3HBox" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin" unique_id=1697317983]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Av3" type="PanelContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox" unique_id=320812743]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("sb_av3")
+
+[node name="Av3Lbl" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/Av3" unique_id=481121326]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.608, 0.435, 0.941, 1)
+theme_override_font_sizes/font_size = 11
+text = "Lh"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E3Content" type="VBoxContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox" unique_id=1418338129]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="E3Header" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content" unique_id=1434815298]
+layout_mode = 2
+
+[node name="E3From" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content/E3Header" unique_id=1330073687]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Lohan"
+
+[node name="E3Time" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content/E3Header" unique_id=1973289706]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.22, 0.376, 1)
+theme_override_font_sizes/font_size = 11
+text = "08:05"
+
+[node name="E3Subject" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content" unique_id=979722025]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.478, 0.408, 0.627, 1)
+theme_override_font_sizes/font_size = 12
+text = "Re: Sprint planning"

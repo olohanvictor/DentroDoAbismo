@@ -1,10 +1,127 @@
-[gd_scene format=3 uid="uid://bwesns0hb6pld"]
+[gd_scene format=3 uid="uid://bht0k1hrssa4v"]
 
+[ext_resource type="Script" uid="uid://b2dbp1oujqimo" path="res://scripts/windows/AeroMail/Aeromail.gd" id="1_5jas2"]
 [ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="1_scgrw"]
 [ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="2_vguuw"]
+[ext_resource type="Texture2D" uid="uid://2k7uedjq6ea2" path="res://assets/icons/apps/email.png" id="4_t8dgc"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoqav"]
-bg_color = Color(0.8150199, 1.0107458e-06, 1.92523e-07, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8dgc"]
+bg_color = Color(0.84, 0.78764, 0.69719994, 1)
+border_color = Color(0.16470589, 0.12156863, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrc86"]
+bg_color = Color(0.075, 0.055, 0.118, 1)
+border_width_right = 1
+border_color = Color(0.165, 0.122, 0.251, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72ig5"]
+bg_color = Color(0.486, 0.31, 1, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2saq"]
+bg_color = Color(0.9843137, 0.8745098, 0.68235296, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2jag"]
+bg_color = Color(0.9843137, 0.8745098, 0.68235296, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwxb8"]
+bg_color = Color(0.69, 0.60651, 0.46229997, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okv03"]
+bg_color = Color(0.118, 0.082, 0.188, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sjers"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gric2"]
+bg_color = Color(0.486, 0.31, 1, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.486, 0.31, 1, 0.2)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_poq5e"]
+bg_color = Color(0.059, 0.051, 0.078, 1)
+border_width_bottom = 1
+border_color = Color(0.165, 0.122, 0.251, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojnpp"]
+bg_color = Color(0.102, 0.063, 0.157, 1)
+border_width_left = 2
+border_color = Color(0.663, 0.333, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjqln"]
+bg_color = Color(0.486, 0.31, 1, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.486, 0.31, 1, 0.2)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_th2b0"]
+bg_color = Color(0.118, 0.082, 0.188, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpiap"]
+bg_color = Color(0.059, 0.051, 0.078, 1)
+border_width_left = 2
+border_color = Color(0.486, 0.31, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbrf7"]
+bg_color = Color(0.659, 0.333, 0.969, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.659, 0.333, 0.969, 0.2)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgh0r"]
+bg_color = Color(0.019623667, 0.016526187, 0.028758314, 1)
+border_width_left = 2
+border_color = Color(0.39102456, 0.0014985991, 0.9124058, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hfa3"]
+bg_color = Color(0.427, 0.157, 0.851, 0.13)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.427, 0.157, 0.851, 0.2)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="eMailPanel" type="Control" unique_id=244046222]
 layout_mode = 3
@@ -15,6 +132,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5jas2")
 
 [node name="Window" type="Panel" parent="." unique_id=1832402006]
 layout_mode = 1
@@ -29,12 +147,392 @@ offset_right = 475.0
 offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_hoqav")
+theme_override_styles/panel = SubResource("StyleBoxFlat_t8dgc")
 script = ExtResource("1_scgrw")
 
 [node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("2_vguuw")]
 layout_mode = 1
 offset_top = -30.0
 offset_bottom = 0.0
+
+[node name="HBox" type="HBoxContainer" parent="Window" unique_id=1569642372]
+layout_mode = 0
+offset_right = 950.0
+offset_bottom = 550.0
+
+[node name="Sidebar" type="PanelContainer" parent="Window/HBox" unique_id=156630176]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrc86")
+
+[node name="SidebarVBox" type="VBoxContainer" parent="Window/HBox/Sidebar" unique_id=1725910734]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LogoMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=505816509]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="LogoHBox" type="HBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin" unique_id=647003154]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LogoIcon" type="PanelContainer" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin/LogoHBox" unique_id=246226411]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_72ig5")
+
+[node name="LogoIconLbl" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin/LogoHBox/LogoIcon" unique_id=537341470]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_t2saq")
+text = "@"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin/LogoHBox/LogoIcon" unique_id=1670785464]
+layout_mode = 2
+texture = ExtResource("4_t8dgc")
+expand_mode = 1
+
+[node name="LogoLbl" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/LogoMargin/LogoHBox" unique_id=246649860]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9843137, 0.8745098, 0.68235296, 1)
+theme_override_font_sizes/font_size = 13
+text = "AeroMail"
+
+[node name="ComposeMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=1941621952]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="ComposeBtn" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/ComposeMargin" unique_id=1025071051]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_x2jag")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vwxb8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vwxb8")
+text = "+ Escrever"
+
+[node name="NavMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=1944394174]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="NavVBox" type="VBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin" unique_id=1427005244]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="NavInbox" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=2035306082]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6497952, 0.5790256, 0.48956227, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_okv03")
+theme_override_styles/hover = SubResource("StyleBoxFlat_okv03")
+text = "  Caixa de Entrada"
+alignment = 0
+
+[node name="NavSent" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=2065480719]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.49709433, 0.43377212, 0.35605133, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_sjers")
+theme_override_styles/hover = SubResource("StyleBoxFlat_okv03")
+text = "  Enviados"
+alignment = 0
+
+[node name="NavDrafts" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=535994093]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.49803922, 0.43529412, 0.35686275, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_sjers")
+theme_override_styles/hover = SubResource("StyleBoxFlat_okv03")
+text = "  Rascunhos"
+alignment = 0
+
+[node name="NavTrash" type="Button" parent="Window/HBox/Sidebar/SidebarVBox/NavMargin/NavVBox" unique_id=503110526]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.49803922, 0.43529412, 0.35686275, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_sjers")
+theme_override_styles/hover = SubResource("StyleBoxFlat_okv03")
+text = "  Lixeira"
+alignment = 0
+
+[node name="SidebarSpacer" type="Control" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=666100808]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="UserMargin" type="MarginContainer" parent="Window/HBox/Sidebar/SidebarVBox" unique_id=1060954837]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="UserHBox" type="HBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin" unique_id=214340810]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="UserAv" type="PanelContainer" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox" unique_id=1848451036]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gric2")
+
+[node name="UserAvLbl" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox/UserAv" unique_id=1523384724]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "Fa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UserInfo" type="VBoxContainer" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox" unique_id=247864801]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="UserName" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox/UserInfo" unique_id=1968784888]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "Fabio."
+
+[node name="UserEmail" type="Label" parent="Window/HBox/Sidebar/SidebarVBox/UserMargin/UserHBox/UserInfo" unique_id=1137739709]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.353, 0.22, 0.502, 1)
+theme_override_font_sizes/font_size = 10
+text = "Fabio@aeromail.app"
+
+[node name="MainArea" type="VBoxContainer" parent="Window/HBox" unique_id=136465822]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="TopBar" type="PanelContainer" parent="Window/HBox/MainArea" unique_id=124689197]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_poq5e")
+
+[node name="TopBarMargin" type="MarginContainer" parent="Window/HBox/MainArea/TopBar" unique_id=1645879218]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 0
+
+[node name="TopBarLbl" type="Label" parent="Window/HBox/MainArea/TopBar/TopBarMargin" unique_id=1826117092]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Caixa de Entrada"
+
+[node name="EmailList" type="VBoxContainer" parent="Window/HBox/MainArea" unique_id=1102759477]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Email1" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=867820610]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ojnpp")
+
+[node name="E1Margin" type="MarginContainer" parent="Window/HBox/MainArea/EmailList/Email1" unique_id=229049096]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="E1HBox" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin" unique_id=1373305539]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Av1" type="PanelContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox" unique_id=545106662]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_mjqln")
+
+[node name="Av1Lbl" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/Av1" unique_id=1579269669]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.663, 0.467, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "RD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E1Content" type="VBoxContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox" unique_id=378741858]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="E1Header" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content" unique_id=1431269127]
+layout_mode = 2
+
+[node name="E1From" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content/E1Header" unique_id=824189982]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.878, 0.816, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Rafael Diniz"
+
+[node name="E1Time" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content/E1Header" unique_id=303380119]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.22, 0.376, 1)
+theme_override_font_sizes/font_size = 11
+text = "10:42"
+
+[node name="E1Subject" type="Label" parent="Window/HBox/MainArea/EmailList/Email1/E1Margin/E1HBox/E1Content" unique_id=1126873231]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Reunião de alinhamento quinta-feira"
+
+[node name="Div1" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=1021871930]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_th2b0")
+
+[node name="Email2" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=2129422063]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpiap")
+
+[node name="E2Margin" type="MarginContainer" parent="Window/HBox/MainArea/EmailList/Email2" unique_id=1985610502]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="E2HBox" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin" unique_id=1705827247]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Av2" type="PanelContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox" unique_id=2116463358]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_tbrf7")
+
+[node name="Av2Lbl" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/Av2" unique_id=660139234]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.769, 0.565, 1, 1)
+theme_override_font_sizes/font_size = 11
+text = "BI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E2Content" type="VBoxContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox" unique_id=242629650]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="E2Header" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content" unique_id=82295420]
+layout_mode = 2
+
+[node name="E2From" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content/E2Header" unique_id=22428673]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.878, 0.816, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "Banco Infra"
+
+[node name="E2Time" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content/E2Header" unique_id=1032620181]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.22, 0.376, 1)
+theme_override_font_sizes/font_size = 11
+text = "09:18"
+
+[node name="E2Subject" type="Label" parent="Window/HBox/MainArea/EmailList/Email2/E2Margin/E2HBox/E2Content" unique_id=31045379]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "Aviso de transferência."
+
+[node name="Div2" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=1309703766]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_th2b0")
+
+[node name="Email3" type="PanelContainer" parent="Window/HBox/MainArea/EmailList" unique_id=96638454]
+custom_minimum_size = Vector2(0, 62)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dgh0r")
+
+[node name="E3Margin" type="MarginContainer" parent="Window/HBox/MainArea/EmailList/Email3" unique_id=1853633571]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="E3HBox" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin" unique_id=1492107456]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Av3" type="PanelContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox" unique_id=1573247196]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_2hfa3")
+
+[node name="Av3Lbl" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/Av3" unique_id=527263551]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.608, 0.435, 0.941, 1)
+theme_override_font_sizes/font_size = 11
+text = "PR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E3Content" type="VBoxContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox" unique_id=1823856651]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="E3Header" type="HBoxContainer" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content" unique_id=1259030826]
+layout_mode = 2
+
+[node name="E3From" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content/E3Header" unique_id=143684903]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.769, 0.659, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "P. R."
+
+[node name="E3Time" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content/E3Header" unique_id=1180801229]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.29, 0.22, 0.376, 1)
+theme_override_font_sizes/font_size = 11
+text = "08:05"
+
+[node name="E3Subject" type="Label" parent="Window/HBox/MainArea/EmailList/Email3/E3Margin/E3HBox/E3Content" unique_id=1638974446]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.478, 0.408, 0.627, 1)
+theme_override_font_sizes/font_size = 12
+text = "Documentos removidos."
 
 [connection signal="gui_input" from="Window/TopBar" to="Window" method="_on_top_bar_gui_input"]

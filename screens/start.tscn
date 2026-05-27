@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://dfmklailfcs2r"]
+
+[ext_resource type="Script" uid="uid://caw54fat6wyey" path="res://scripts/start.gd" id="1_f5myi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2a4w"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_x2a4w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5myi"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.425, 0, 0.85, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y4iue"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.23683347, 0, 0.49, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oncuk"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.29720482, 0.0010975737, 0.60846, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_f5myi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel/Start:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_y4iue"]
+resource_name = "new_animation"
+
+[sub_resource type="Animation" id="Animation_oncuk"]
+resource_name = "transicao"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Panel/Start:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y4iue"]
+_data = {
+&"RESET": SubResource("Animation_f5myi"),
+&"new_animation": SubResource("Animation_y4iue"),
+&"transicao": SubResource("Animation_oncuk")
+}
+
+[node name="Start" type="Control" unique_id=993053382]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f5myi")
+
+[node name="Panel" type="Panel" parent="." unique_id=1298676586]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_x2a4w")
+
+[node name="Start" type="Button" parent="Panel" unique_id=1892535591]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.5
+offset_top = -33.5
+offset_right = 143.5
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_x2a4w")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxFlat_f5myi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y4iue")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oncuk")
+text = "▷"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1364951181]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=2019234455]
+libraries/ = SubResource("AnimationLibrary_y4iue")
+
+[connection signal="pressed" from="Panel/Start" to="." method="_on_start_pressed"]

@@ -6,8 +6,8 @@ extends Control
 ]
 
 @onready var chats = [
-	$Window/ChatLaura,
-	$Window/ChatRodrigo
+	$Window/ChatNatalia,
+	$Window/ChatPauloRoger
 ]
 
 func _ready():
@@ -18,6 +18,6 @@ func selected_chat(button):
 	if button == contacts[0]:
 		for chat in chats:
 			chat.hide()
-		$Window/ChatRodrigo.show()
+		$Window/ChatPauloRoger.show()
 	else:
-		$Window/ChatLaura.show()
+		$Window/ChatNatalia.show()

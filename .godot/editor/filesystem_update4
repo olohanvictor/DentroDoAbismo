@@ -13,3 +13,14 @@ res://scripts/screens/Lockscreen/lockscreen.gd
 res://screens/start.tscn
 res://scripts/start.gd
 res://windows/iMessage/iMessage.tscn
+res://components/windowtopbar.tscn
+res://scripts/clock.gd
+res://scripts/windows/AeroMail/Aeromail.gd
+res://scripts/windows/Browser/Browser.gd
+res://scripts/windows/iMessage/imessage.gd
+res://styles/explorer/buttons/abas.tres
+res://styles/explorer/buttons/abashover.tres
+res://styles/imessage/buttons/chatrecente.tres
+res://styles/imessage/chatmessages/contmsg.tres
+res://styles/imessage/chatmessages/usermsg.tres
+res://styles/wifipanel/buttons/selected.tres

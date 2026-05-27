@@ -4,21 +4,20 @@ extends Control
 	$Window/Sidebar/folder1,
 	$Window/Sidebar/folder2,
 	$Window/Sidebar/folder3,
-	$Window/Sidebar/folder4,
-	$Window/Sidebar/folder5,
-	$Window/Sidebar/folder6,
-	$Window/Sidebar/folder7
 ]
 
-@onready var folder_aberto = [
-	$Window/ChatLaura,
-	$Window/ChatRodrigo
-]
 
 func _ready():
-	$Window/Downloads.hide()
 	pass
 
 
 func _on_folder_2_pressed() -> void:
-	$Window/Downloads.show()# Replace with function body.
+	pass # Replace with function body.
+
+
+func _on_jogo_de_dados_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_folder_3_pressed() -> void:
+	pass # Replace with function body.

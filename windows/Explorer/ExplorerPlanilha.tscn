@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://b84coe2plr2kv"]
+
+[ext_resource type="Script" uid="uid://c8gc4exww7a4v" path="res://scripts/windows/Explorer/explorer.gd" id="1_o34cb"]
+[ext_resource type="Script" uid="uid://c6kpf33kbooqr" path="res://scripts/window.gd" id="2_uvsjk"]
+[ext_resource type="StyleBox" uid="uid://b657fpqbigs1b" path="res://styles/imessage/buttons/chatrecente.tres" id="3_kto0n"]
+[ext_resource type="Script" uid="uid://cln0vp7ynxkhd" path="res://windows/Explorer/folder_1.gd" id="4_gifj1"]
+[ext_resource type="Script" uid="uid://dkdh5mt2fvrid" path="res://windows/Explorer/folder_2.gd" id="5_jr5cq"]
+[ext_resource type="Texture2D" uid="uid://cx5d7dxt3n21c" path="res://assets/appsicons/Explorer/desktop/sidebar.png" id="6_62ua0"]
+[ext_resource type="Script" uid="uid://yxmilm7f64ni" path="res://windows/Explorer/folder_3.gd" id="6_kto0n"]
+[ext_resource type="Texture2D" uid="uid://dksqwou8et86t" path="res://assets/appsicons/Explorer/Documentos/sidebar-docs.png" id="7_gyd21"]
+[ext_resource type="Texture2D" uid="uid://clkdjksaudsmv" path="res://assets/appsicons/Explorer/financas/sidebar-finan.png" id="8_6x3dw"]
+[ext_resource type="PackedScene" uid="uid://dy4puff0kxy0y" path="res://components/windowtopbar.tscn" id="9_05ljb"]
+[ext_resource type="Script" uid="uid://dgp8535dhtovn" path="res://scripts/arquivo3.gd" id="10_lo2jk"]
+[ext_resource type="Texture2D" uid="uid://b2i8q8dvj47ff" path="res://assets/appsicons/Explorer/financas/planilha.png" id="11_o34cb"]
+[ext_resource type="Texture2D" uid="uid://bs0v6d5kr28ut" path="res://assets/appsicons/Explorer/desktop/arquivos1.png" id="12_o5gmq"]
+[ext_resource type="Texture2D" uid="uid://bvn5afc5sha26" path="res://assets/appsicons/Explorer/Documentos/arquivos3.png" id="13_q2ry6"]
+[ext_resource type="Texture2D" uid="uid://dgbynxbrt8vv2" path="res://assets/appsicons/Explorer/financas/arquivos4.png" id="14_npp3t"]
+[ext_resource type="Texture2D" uid="uid://bmhka1cwonfjp" path="res://assets/appsicons/Explorer/financas/arquivos5.png" id="15_037oi"]
+[ext_resource type="Texture2D" uid="uid://rt1auwiful2x" path="res://assets/appsicons/Explorer/desktop/invalido.png" id="16_32i3f"]
+[ext_resource type="Texture2D" uid="uid://bos88av3s6261" path="res://assets/appsicons/Explorer/financas/arquivo6.png" id="16_uvsjk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kldyh"]
+bg_color = Color(0.87441623, 0.91330624, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ft1o"]
+bg_color = Color(0.7149069, 0.71490693, 0.71490675, 1)
+corner_radius_top_right = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsxq7"]
+content_margin_left = 8.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.41960785, 0.41960785, 0.41960785, 0.76862746)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dydum"]
+bg_color = Color(0.40631357, 0.57699525, 1, 1)
+
+[node name="ExplorerPanel" type="Control" unique_id=475149261]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_o34cb")
+
+[node name="Window" type="Panel" parent="." unique_id=1457848082]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -462.0
+offset_top = -314.0
+offset_right = 488.0
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kldyh")
+script = ExtResource("2_uvsjk")
+
+[node name="Sidebar" type="Panel" parent="Window" unique_id=255795137]
+layout_mode = 0
+offset_right = 155.0
+offset_bottom = 550.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ft1o")
+
+[node name="folder1" type="Button" parent="Window/Sidebar" unique_id=82865971]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 19.0
+offset_right = 153.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("3_kto0n")
+text = "
+"
+alignment = 0
+expand_icon = true
+script = ExtResource("4_gifj1")
+
+[node name="folder2" type="Button" parent="Window/Sidebar" unique_id=1542251996]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 64.0
+offset_right = 145.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("3_kto0n")
+flat = true
+alignment = 0
+expand_icon = true
+script = ExtResource("5_jr5cq")
+
+[node name="folder3" type="Button" parent="Window/Sidebar" unique_id=1500321928]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 153.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_rsxq7")
+text = "
+
+"
+alignment = 0
+expand_icon = true
+script = ExtResource("6_kto0n")
+
+[node name="Sidebar2" type="Sprite2D" parent="Window/Sidebar" unique_id=2045161524]
+visible = false
+position = Vector2(77, 274)
+scale = Vector2(0.77, 1.0317756)
+texture = ExtResource("6_62ua0")
+
+[node name="Sidebar3" type="Sprite2D" parent="Window/Sidebar" unique_id=350160122]
+position = Vector2(78.155, 274)
+scale = Vector2(0.7587864, 1.0317756)
+texture = ExtResource("7_gyd21")
+
+[node name="Sidebar4" type="Sprite2D" parent="Window/Sidebar" unique_id=1526470115]
+position = Vector2(78.155, 274)
+scale = Vector2(0.7587864, 1.0317756)
+texture = ExtResource("8_6x3dw")
+
+[node name="TopBar" parent="Window" unique_id=267688432 instance=ExtResource("9_05ljb")]
+layout_mode = 1
+offset_top = -30.0
+offset_bottom = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dydum")
+
+[node name="MiddleBar" type="Panel" parent="Window" unique_id=1199916700]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 100.0
+offset_right = 551.0
+offset_bottom = 337.0
+
+[node name="arquivo_a_selecionar-planilha" type="Button" parent="Window/MiddleBar" unique_id=497087839]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -28.0
+offset_right = 143.0
+offset_bottom = 4.0
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = ExtResource("3_kto0n")
+alignment = 0
+expand_icon = true
+script = ExtResource("10_lo2jk")
+
+[node name="VisualizadorVazio" type="Sprite2D" parent="Window/MiddleBar" unique_id=192971554]
+position = Vector2(580.1694, 175.00002)
+scale = Vector2(0.95975655, 1.0299065)
+texture = ExtResource("11_o34cb")
+
+[node name="Arquivos1" type="Sprite2D" parent="Window/MiddleBar" unique_id=647961261]
+visible = false
+position = Vector2(181, 175.5)
+scale = Vector2(0.8321077, 1.0299066)
+texture = ExtResource("12_o5gmq")
+
+[node name="Arquivos2" type="Sprite2D" parent="Window/MiddleBar" unique_id=1398447358]
+visible = false
+position = Vector2(182.25, 174.99998)
+scale = Vector2(0.8591101, 1.0280375)
+texture = ExtResource("13_q2ry6")
+
+[node name="Arquivos3" type="Sprite2D" parent="Window/MiddleBar" unique_id=121131745]
+visible = false
+position = Vector2(182.25, 174.99998)
+scale = Vector2(0.8591101, 1.0280375)
+texture = ExtResource("14_npp3t")
+
+[node name="Arquivos4" type="Sprite2D" parent="Window/MiddleBar" unique_id=151085202]
+visible = false
+position = Vector2(182.25, 174.99998)
+scale = Vector2(0.8591101, 1.0280375)
+texture = ExtResource("15_037oi")
+
+[node name="Arquivos5" type="Sprite2D" parent="Window/MiddleBar" unique_id=1009173768]
+visible = false
+position = Vector2(182.25, 174.99998)
+scale = Vector2(0.8591101, 1.0280375)
+texture = ExtResource("15_037oi")
+
+[node name="Arquivos6" type="Sprite2D" parent="Window/MiddleBar" unique_id=119046290]
+position = Vector2(182.25, 174.99998)
+scale = Vector2(0.8591101, 1.0280375)
+texture = ExtResource("16_uvsjk")
+
+[node name="Invalido" type="Sprite2D" parent="Window/MiddleBar" unique_id=1026670039]
+visible = false
+position = Vector2(579.25, 175)
+scale = Vector2(0.96666676, 1.3647642)
+texture = ExtResource("16_32i3f")
+
+[connection signal="pressed" from="Window/Sidebar/folder1" to="Window/Sidebar/folder1" method="_on_pressed"]
+[connection signal="pressed" from="Window/Sidebar/folder2" to="Window/Sidebar/folder2" method="_on_pressed"]
+[connection signal="pressed" from="Window/Sidebar/folder3" to="Window/Sidebar/folder3" method="_on_pressed"]
+[connection signal="gui_input" from="Window/TopBar" to="Window" method="_on_top_bar_gui_input"]
+[connection signal="pressed" from="Window/MiddleBar/arquivo_a_selecionar-planilha" to="Window/MiddleBar/arquivo_a_selecionar-planilha" method="_on_pressed"]

@@ -1,3 +1,5 @@
 res://screens/desktop.tscn
 res://scripts/screens/Desktop/desktop.gd
-res://windows/Explorer/Explorer.tscn
+res://scripts/clock.gd
+res://windows/Wifi/Wifi.tscn
+res://styles/wifipanel/buttons/selected.tres
